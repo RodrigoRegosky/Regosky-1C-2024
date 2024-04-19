@@ -33,21 +33,28 @@
 #include "hc_sr04.h"
 #include "switch.h"
 #include "lcditse0803.h"
+#include "timer_mcu.h"
 /*==================[macros and definitions]=================================*/
-
-#define CONFIG_BLINK_PERIOD_LED_1 1000
-#define CONFIG_BLINK_PERIOD_LED_2 1500
-#define CONFIG_BLINK_PERIOD_LED_3 500
 
 /*==================[internal data definition]===============================*/
 
-TaskHandle_t led1_task_handle = NULL;
-TaskHandle_t led2_task_handle = NULL;
-TaskHandle_t led3_task_handle = NULL;
 bool medir;
 bool hold;
 
+TaskHandle_t medir_task_handle = NULL;
+TaskHandle_t tecla_task_handle = NULL;
+
 /*==================[internal functions declaration]=========================*/
+
+void FuncTimerMedir(void *param)
+{
+	vTaskNotifyGiveFromISR(medir_task_handle, pdFALSE);
+}
+
+void FuncTimerTecla(void *param)
+{
+	vTaskNotifyGiveFromISR(tecla_task_handle, pdFALSE);
+}
 
 static void ShowDistanceTask(void *pvParameter)
 {
@@ -55,6 +62,9 @@ static void ShowDistanceTask(void *pvParameter)
 
 	while (true)
 	{
+
+		// ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
+
 		if (medir == true)
 		{
 			distancia = HcSr04ReadDistanceInCentimeters();
@@ -87,13 +97,15 @@ static void ShowDistanceTask(void *pvParameter)
 			{
 				LcdItsE0803Write(distancia);
 			}
-		}else
+		}
+		else
 		{
 			LedsOffAll();
 			LcdItsE0803Off();
 		}
 
-		vTaskDelay(1000 / portTICK_PERIOD_MS);
+		ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
+		// vTaskDelay(1000 / portTICK_PERIOD_MS);
 	}
 }
 
@@ -101,6 +113,8 @@ static void TECTask(void *pvParameter)
 {
 	while (true)
 	{
+		// ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
+
 		int8_t tecla = SwitchesRead();
 
 		if (tecla == SWITCH_1)
@@ -112,7 +126,8 @@ static void TECTask(void *pvParameter)
 			hold = !hold;
 		}
 
-		vTaskDelay(50 / portTICK_PERIOD_MS);
+		ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
+		// vTaskDelay(50 / portTICK_PERIOD_MS);
 	}
 }
 /*==================[external functions definition]==========================*/
@@ -123,8 +138,27 @@ void app_main(void)
 	HcSr04Init(GPIO_3, GPIO_2);
 	LcdItsE0803Init();
 
-	xTaskCreate(&ShowDistanceTask, "Mostrar_Distancia_con_Leds", 2048, NULL, 5, NULL);
-	xTaskCreate(&TECTask, "TEC_1", 512, NULL, 5, NULL);
+	timer_config_t timer_medir = {
+		.timer = TIMER_A,
+		.period = 1000000,
+		.func_p = FuncTimerMedir,
+		.param_p = NULL};
+
+	TimerInit(&timer_medir);
+
+	timer_config_t timer_tecla = {
+		.timer = TIMER_B,
+		.period = 50000,
+		.func_p = FuncTimerTecla,
+		.param_p = NULL};
+
+	TimerInit(&timer_tecla);
+
+	xTaskCreate(&ShowDistanceTask, "Mostrar_Distancia_con_Leds", 2048, NULL, 5, &medir_task_handle);
+	xTaskCreate(&TECTask, "TEC_1", 512, NULL, 5, &tecla_task_handle);
+
+	TimerStart(timer_medir.timer);
+	TimerStart(timer_tecla.timer);
 }
 
 /*==================[end of file]============================================*/
