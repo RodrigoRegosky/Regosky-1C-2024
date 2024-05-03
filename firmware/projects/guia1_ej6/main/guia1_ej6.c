@@ -1,27 +1,21 @@
-/*! @mainpage Template
+/*! @mainpage Proyecto 1 - Ejercicio 6
  *
- * @section genDesc General Description
+ * \section genDesc General Description
  *
- * This section describes how the program works.
- *
- * <a href="https://drive.google.com/...">Operation Example</a>
- *
- * @section hardConn Hardware Connection
- *
- * |    Peripheral  |   ESP32   	|
- * |:--------------:|:--------------|
- * | 	PIN_X	 	| 	GPIO_X		|
- *
- *
+ * La resolucion del Ejercicio 6 es una función que recibe un dato de 32 bits, la cantidad de dígitos de salida y dos vectores de estructuras del tipo gpioConf_t. 
+ * La función permite mostrar por display el valor que recibe.
+ * 
+ * 
  * @section changelog Changelog
  *
  * |   Date	    | Description                                    |
  * |:----------:|:-----------------------------------------------|
- * | 12/09/2023 | Document creation		                         |
+ * | 05/04/2024 | Document creation		                         |
  *
- * @author Albano Peñalva (albano.penalva@uner.edu.ar)
+ * @author Rodrigo Ivan Regosky 
  *
  */
+
 
 /*==================[inclusions]=============================================*/
 #include <stdio.h>
@@ -40,6 +34,16 @@ typedef struct
 
 /*==================[internal functions declaration]=========================*/
 
+/*!
+ * 
+ * @fn void convertToBcdArray(uint32_t data, uint8_t digits, uint8_t *bcd_number)
+ * @brief Funcion que convierte un numero entero a formato BCD y guarda cada digito convertido en un vector
+ * @param data El numero que se quiere convertir a BCD
+ * @param digits La cantidad de digitos del numero a convertir
+ * @param bcd_number Puntero a vector donde se almacena cada digito del numero pasado a BCD
+ * @return 
+ */
+
 void convertToBcdArray(uint32_t data, uint8_t digits, uint8_t *bcd_number)
 {
 
@@ -55,6 +59,16 @@ void convertToBcdArray(uint32_t data, uint8_t digits, uint8_t *bcd_number)
 	}
 }
 
+/*!
+ * 
+ * @fn void config_BCD_GPIO(uint8_t dig, gpioConf_t *vec)
+ * @brief Funcion que cambia el estado de un vector de GPIO según el estado del bit correspondiente en un digito BCD que recibe
+ * @param dig Digito BCD
+ * @param vec Vector que mapea los GPIO 20, 21, 22 y 23
+ * @return 
+ */
+
+
 void config_BCD_GPIO(uint8_t dig, gpioConf_t *vec)
 {
 	for (int i = 0; i < 4; i++)
@@ -69,6 +83,17 @@ void config_BCD_GPIO(uint8_t dig, gpioConf_t *vec)
 		}
 	}
 }
+
+/*!
+ * 
+ * @fn void mostrar_por_display(uint32_t dato, uint8_t dig, gpioConf_t *vec, gpioConf_t *vecmap)
+ * @brief Funcion que muestra por Display un numero de 32 bits 
+ * @param dato Numero que se desea mostrar por Display 
+ * @param dig Cantidad de digitos del numero ingresado
+ * @param vec Vector que mapea los GPIO 20, 21, 22 y 23
+ * @param vecmap Vector que mapea los GPIO 9, 18 y 19
+ * @return 
+ */
 
 void mostrar_por_display(uint32_t dato, uint8_t dig, gpioConf_t *vec, gpioConf_t *vecmap)
 {

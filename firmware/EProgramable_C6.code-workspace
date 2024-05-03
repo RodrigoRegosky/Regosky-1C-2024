@@ -35,6 +35,12 @@
         },
         {
             "path": "drivers"
+        },
+        {
+            "path": "projects/pro2_act3"
+        },
+        {
+            "path": "projects/pro2_act4"
         }
     ],
     "settings": {
