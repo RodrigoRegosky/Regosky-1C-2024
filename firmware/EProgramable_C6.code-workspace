@@ -1,46 +1,64 @@
 {
     "folders": [
         {
+            "name": "0_blinking",
             "path": "projects/0_blinking"
         },
         {
+            "name": "1_blinking_switch",
             "path": "projects/1_blinking_switch"
         },
         {
+            "name": "2_blinking_tasks",
             "path": "projects/2_blinking_tasks"
         },
         {
+            "name": "3_blinking_timer",
             "path": "projects/3_blinking_timer"
         },
         {
+            "name": "guia1_ej2",
             "path": "projects/guia1_ej2"
         },
         {
+            "name": "guia1_ej3",
             "path": "projects/guia1_ej3"
         },
         {
+            "name": "guia1_ej4",
             "path": "projects/guia1_ej4"
         },
         {
+            "name": "guia1_ej5",
             "path": "projects/guia1_ej5"
         },
         {
+            "name": "guia1_ej6",
             "path": "projects/guia1_ej6"
         },
         {
+            "name": "pro2_act1",
             "path": "projects/pro2_act1"
         },
         {
+            "name": "pro2_act2",
             "path": "projects/pro2_act2"
         },
         {
-            "path": "drivers"
-        },
-        {
+            "name": "pro2_act3",
             "path": "projects/pro2_act3"
         },
         {
+            "name": "pro2_act4",
             "path": "projects/pro2_act4"
+        },
+        {
+            "name": "drivers",
+            "path": "drivers"
+        },
+        {
+            "name": "proyecto_integrador",
+            "path": "projects/proyecto_integrador"
         }
     ],
     "settings": {
