@@ -1,0 +1,537 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Examen: Archivo de código fuente C:/Repositorios/Regosky-1C-2024/firmware/projects/Examen/main/Examen.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Examen<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_examen_8c_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Examen.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_examen_8c.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">/*==================[inclusions]=============================================*/</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;freertos/FreeRTOS.h&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;freertos/task.h&quot;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &quot;<a class="code" href="led_8h.html">led.h</a>&quot;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;<a class="code" href="hc__sr04_8h.html">hc_sr04.h</a>&quot;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;<a class="code" href="switch_8h.html">switch.h</a>&quot;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;<a class="code" href="timer__mcu_8h.html">timer_mcu.h</a>&quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;<a class="code" href="uart__mcu_8h.html">uart_mcu.h</a>&quot;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &quot;<a class="code" href="analog__io__mcu_8h.html">analog_io_mcu.h</a>&quot;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">/*==================[macros and definitions]=================================*/</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="_examen_8c.html#a194b33ff09e2af8e76b05237871d96ad">   36</a></span>int16_t <a class="code hl_variable" href="_examen_8c.html#a194b33ff09e2af8e76b05237871d96ad">medicionPH</a>;      </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="_examen_8c.html#a1992b6d21ff94ffe20018724920c74a5">   37</a></span>int16_t <a class="code hl_variable" href="_examen_8c.html#a1992b6d21ff94ffe20018724920c74a5">medicionHumedad</a>; </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="_examen_8c.html#a815a9305e9d78a91240210f302ebdd96">   38</a></span><span class="keywordtype">float</span> <a class="code hl_variable" href="_examen_8c.html#a815a9305e9d78a91240210f302ebdd96">medicionTension</a>;   </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="_examen_8c.html#ae81847910f2120ae21b6a45e9fc866c4">   39</a></span>int8_t <a class="code hl_variable" href="_examen_8c.html#ae81847910f2120ae21b6a45e9fc866c4">teclaSistema</a>;     </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="_examen_8c.html#a8c781f7c2e9dcba4f065e4ef60da7fde">   44</a></span><span class="keywordtype">float</span> <a class="code hl_variable" href="_examen_8c.html#a8c781f7c2e9dcba4f065e4ef60da7fde">cteConversionVoltaPH</a> = 3 / 14; </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="_examen_8c.html#a28582a5585ef42b899878a95860f31df">   49</a></span><span class="keywordtype">bool</span> <a class="code hl_variable" href="_examen_8c.html#a28582a5585ef42b899878a95860f31df">estadoBombaRiego</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="_examen_8c.html#ae7cc32f3577cd3a8a33af3679090b220">   50</a></span><span class="keywordtype">bool</span> <a class="code hl_variable" href="_examen_8c.html#ae7cc32f3577cd3a8a33af3679090b220">estadoBombaPhA</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="_examen_8c.html#a11261c2708b84e77c74d9be5ebe474ae">   51</a></span><span class="keywordtype">bool</span> <a class="code hl_variable" href="_examen_8c.html#a11261c2708b84e77c74d9be5ebe474ae">estadobombaPhB</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="_examen_8c.html#a37cdc2fef93a1c283850846484f18b28">   52</a></span><span class="keywordtype">bool</span> <a class="code hl_variable" href="_examen_8c.html#a37cdc2fef93a1c283850846484f18b28">estadoHumedad</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="_examen_8c.html#a367481b5beff07dd3d679d1a268f7919">   53</a></span><span class="keywordtype">bool</span> <a class="code hl_variable" href="_examen_8c.html#a367481b5beff07dd3d679d1a268f7919">estadoSistema</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="_examen_8c.html#a2f31c17eb7db66b3f19db620ff3cc912">   58</a></span>TaskHandle_t <a class="code hl_variable" href="_examen_8c.html#a2f31c17eb7db66b3f19db620ff3cc912">Sistema_de_mediciones_task_handle</a> = <a class="code hl_define" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="_examen_8c.html#a1888832bcc2cad4a94ff791a459d101c">   59</a></span>TaskHandle_t <a class="code hl_variable" href="_examen_8c.html#a1888832bcc2cad4a94ff791a459d101c">Informar_estado_sistema_task_handle</a> = <a class="code hl_define" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="_examen_8c.html#ae8cebe48a360c6b36116e4418691b81d">   60</a></span>TaskHandle_t <a class="code hl_variable" href="_examen_8c.html#ae8cebe48a360c6b36116e4418691b81d">Controlar_Sistema_task_handle</a> = <a class="code hl_define" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">/*==================[internal data definition]===============================*/</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">/*==================[internal functions declaration]=========================*/</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="foldopen" id="foldopen00073" data-start="{" data-end="}">
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="_examen_8c.html#ad88aabd82073b37e3bde2727102369ba">   73</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_examen_8c.html#ad88aabd82073b37e3bde2727102369ba">FuncTimerSistemaDeMediciones</a>(<span class="keywordtype">void</span> *param)</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>{</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    vTaskNotifyGiveFromISR(<a class="code hl_variable" href="_examen_8c.html#a2f31c17eb7db66b3f19db620ff3cc912">Sistema_de_mediciones_task_handle</a>, pdFALSE);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>}</div>
+</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="foldopen" id="foldopen00084" data-start="{" data-end="}">
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="_examen_8c.html#af08c90a69c757a3f4ed3530e2f5e28e0">   84</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_examen_8c.html#af08c90a69c757a3f4ed3530e2f5e28e0">FuncTimerInformarEstadoSistema</a>(<span class="keywordtype">void</span> *param)</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>{</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    vTaskNotifyGiveFromISR(<a class="code hl_variable" href="_examen_8c.html#a1888832bcc2cad4a94ff791a459d101c">Informar_estado_sistema_task_handle</a>, pdFALSE);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>}</div>
+</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="foldopen" id="foldopen00095" data-start="{" data-end="}">
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="_examen_8c.html#a441a780838659ea9ce51e6b04c94146c">   95</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_examen_8c.html#a441a780838659ea9ce51e6b04c94146c">FuncTimerControlarSistema</a>(<span class="keywordtype">void</span> *param)</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>{</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    vTaskNotifyGiveFromISR(<a class="code hl_variable" href="_examen_8c.html#ae8cebe48a360c6b36116e4418691b81d">Controlar_Sistema_task_handle</a>, pdFALSE);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>}</div>
+</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="foldopen" id="foldopen00114" data-start="{" data-end="}">
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="_examen_8c.html#a7e5e922c4097dad08b50e04f23d7416f">  114</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_examen_8c.html#a7e5e922c4097dad08b50e04f23d7416f">SensorDeRiego</a>()</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>{</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <a class="code hl_function" href="group___analog___i_o.html#gab5ae00a35744f407072230979e593fd9">AnalogInputReadSingle</a>(<a class="code hl_enumvalue" href="group___analog___i_o.html#gga4ebdf50515e5d73c58c24fd1491770dca703cf81b7a9530ba8650e0ee2f29d68e">CH1</a>, &amp;<a class="code hl_variable" href="_examen_8c.html#a1992b6d21ff94ffe20018724920c74a5">medicionHumedad</a>);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>}</div>
+</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="foldopen" id="foldopen00125" data-start="{" data-end="}">
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="_examen_8c.html#a3c89bec3e41b2e2601b729393c955e42">  125</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_examen_8c.html#a3c89bec3e41b2e2601b729393c955e42">SensorTension</a>()</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>{</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <a class="code hl_function" href="group___analog___i_o.html#gab5ae00a35744f407072230979e593fd9">AnalogInputReadSingle</a>(<a class="code hl_enumvalue" href="group___analog___i_o.html#gga4ebdf50515e5d73c58c24fd1491770dcae574b39c34bd88c27ea641014831e53a">CH2</a>, &amp;<a class="code hl_variable" href="_examen_8c.html#a815a9305e9d78a91240210f302ebdd96">medicionTension</a>);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>}</div>
+</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="foldopen" id="foldopen00136" data-start="{" data-end="}">
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="_examen_8c.html#a65fc762aa35faf3133c57620fdc12c65">  136</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_examen_8c.html#a65fc762aa35faf3133c57620fdc12c65">controlBombaRiego</a>()</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>{</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="_examen_8c.html#a28582a5585ef42b899878a95860f31df">estadoBombaRiego</a> = <span class="keyword">true</span>)</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    {</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        <a class="code hl_function" href="group___g_i_o_p.html#ga30ed9d97406129b9b6390154a7479d70">GPIOOff</a>(<a class="code hl_enumvalue" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a8bdaec9182fb8ab2106d5c67f3eabd2d">GPIO_9</a>);</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    }</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="_examen_8c.html#a28582a5585ef42b899878a95860f31df">estadoBombaRiego</a> = <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    {</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <a class="code hl_function" href="group___g_i_o_p.html#gaba62250f2b0e73a98b6f35fb6078fdb1">GPIOOn</a>(<a class="code hl_enumvalue" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a8bdaec9182fb8ab2106d5c67f3eabd2d">GPIO_9</a>);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        <a class="code hl_function" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>, <span class="stringliteral">&quot;Bomba de riego encendida&quot;</span>);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        <a class="code hl_function" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>, <span class="stringliteral">&quot;\n\r&quot;</span>);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    }</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>}</div>
+</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="foldopen" id="foldopen00156" data-start="{" data-end="}">
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="_examen_8c.html#aebac455c20f742653e8b8531f5de5ed3">  156</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_examen_8c.html#aebac455c20f742653e8b8531f5de5ed3">controlPhA</a>()</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>{</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="_examen_8c.html#ae7cc32f3577cd3a8a33af3679090b220">estadoBombaPhA</a> = <span class="keyword">true</span>)</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    {</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        <a class="code hl_function" href="group___g_i_o_p.html#ga30ed9d97406129b9b6390154a7479d70">GPIOOff</a>(<a class="code hl_enumvalue" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a3943e6071dec78b6bcf9586cf0de6dd3">GPIO_10</a>);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    }</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="_examen_8c.html#ae7cc32f3577cd3a8a33af3679090b220">estadoBombaPhA</a> = <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    {</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        <a class="code hl_function" href="group___g_i_o_p.html#gaba62250f2b0e73a98b6f35fb6078fdb1">GPIOOn</a>(<a class="code hl_enumvalue" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a3943e6071dec78b6bcf9586cf0de6dd3">GPIO_10</a>);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <a class="code hl_function" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>, <span class="stringliteral">&quot;Bomba de PhA encendida&quot;</span>);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        <a class="code hl_function" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>, <span class="stringliteral">&quot;\n\r&quot;</span>);</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    }</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>}</div>
+</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="foldopen" id="foldopen00176" data-start="{" data-end="}">
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno"><a class="line" href="_examen_8c.html#a6123b9e1447ffff7e28bf8ae780504e5">  176</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_examen_8c.html#a6123b9e1447ffff7e28bf8ae780504e5">controlPhB</a>()</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>{</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="_examen_8c.html#a11261c2708b84e77c74d9be5ebe474ae">estadobombaPhB</a> = <span class="keyword">true</span>)</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    {</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        <a class="code hl_function" href="group___g_i_o_p.html#ga30ed9d97406129b9b6390154a7479d70">GPIOOff</a>(<a class="code hl_enumvalue" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393af3ddb0db315daeab49b75dbca06ba6e5">GPIO_11</a>);</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    }</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="_examen_8c.html#a11261c2708b84e77c74d9be5ebe474ae">estadobombaPhB</a> = <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    {</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        <a class="code hl_function" href="group___g_i_o_p.html#gaba62250f2b0e73a98b6f35fb6078fdb1">GPIOOn</a>(<a class="code hl_enumvalue" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393af3ddb0db315daeab49b75dbca06ba6e5">GPIO_11</a>);</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        <a class="code hl_function" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>, <span class="stringliteral">&quot;Bomba de PhB encendida&quot;</span>);</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        <a class="code hl_function" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>, <span class="stringliteral">&quot;\n\r&quot;</span>);</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    }</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>}</div>
+</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
+<div class="foldopen" id="foldopen00196" data-start="{" data-end="}">
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno"><a class="line" href="_examen_8c.html#a234c92e64ab6228c8b14dcfbf6e711e0">  196</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_examen_8c.html#a234c92e64ab6228c8b14dcfbf6e711e0">MedidorHumedad</a>()</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>{</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    <a class="code hl_function" href="_examen_8c.html#a7e5e922c4097dad08b50e04f23d7416f">SensorDeRiego</a>();</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="_examen_8c.html#a1992b6d21ff94ffe20018724920c74a5">medicionHumedad</a> &lt; 1)</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    {</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        <a class="code hl_variable" href="_examen_8c.html#a37cdc2fef93a1c283850846484f18b28">estadoHumedad</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="_examen_8c.html#a28582a5585ef42b899878a95860f31df">estadoBombaRiego</a> = <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        {</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>            <a class="code hl_function" href="_examen_8c.html#a65fc762aa35faf3133c57620fdc12c65">controlBombaRiego</a>();</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        }</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    }</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="_examen_8c.html#a1992b6d21ff94ffe20018724920c74a5">medicionHumedad</a> &gt;= 1)</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    {</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        <a class="code hl_variable" href="_examen_8c.html#a37cdc2fef93a1c283850846484f18b28">estadoHumedad</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="_examen_8c.html#a28582a5585ef42b899878a95860f31df">estadoBombaRiego</a> = <span class="keyword">true</span>)</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        {</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>            <a class="code hl_function" href="_examen_8c.html#a65fc762aa35faf3133c57620fdc12c65">controlBombaRiego</a>();</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>        }</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    }</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>}</div>
+</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
+<div class="foldopen" id="foldopen00224" data-start="{" data-end="}">
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno"><a class="line" href="_examen_8c.html#a0a67665730216f5105087c980c89d35b">  224</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_examen_8c.html#a0a67665730216f5105087c980c89d35b">medidorPH</a>()</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>{</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    <a class="code hl_function" href="_examen_8c.html#a3c89bec3e41b2e2601b729393c955e42">SensorTension</a>();</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    <a class="code hl_variable" href="_examen_8c.html#a194b33ff09e2af8e76b05237871d96ad">medicionPH</a> = (uint16_t)(<a class="code hl_variable" href="_examen_8c.html#a815a9305e9d78a91240210f302ebdd96">medicionTension</a> * <a class="code hl_variable" href="_examen_8c.html#a8c781f7c2e9dcba4f065e4ef60da7fde">cteConversionVoltaPH</a>);</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="_examen_8c.html#a194b33ff09e2af8e76b05237871d96ad">medicionPH</a> &lt; 6) <span class="comment">//</span></div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    {</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="_examen_8c.html#a11261c2708b84e77c74d9be5ebe474ae">estadobombaPhB</a> = <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        {</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>            <a class="code hl_function" href="_examen_8c.html#a6123b9e1447ffff7e28bf8ae780504e5">controlPhB</a>();</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        }</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="_examen_8c.html#ae7cc32f3577cd3a8a33af3679090b220">estadoBombaPhA</a> = <span class="keyword">true</span>)</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        {</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>            <a class="code hl_function" href="_examen_8c.html#aebac455c20f742653e8b8531f5de5ed3">controlPhA</a>();</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        }</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    }</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="_examen_8c.html#a194b33ff09e2af8e76b05237871d96ad">medicionPH</a> &gt; 6.7)</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    {</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="_examen_8c.html#a11261c2708b84e77c74d9be5ebe474ae">estadobombaPhB</a> = <span class="keyword">true</span>)</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>        {</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>            <a class="code hl_function" href="_examen_8c.html#a6123b9e1447ffff7e28bf8ae780504e5">controlPhB</a>();</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        }</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="_examen_8c.html#ae7cc32f3577cd3a8a33af3679090b220">estadoBombaPhA</a> = <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        {</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            <a class="code hl_function" href="_examen_8c.html#aebac455c20f742653e8b8531f5de5ed3">controlPhA</a>();</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        }</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    }</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="_examen_8c.html#a194b33ff09e2af8e76b05237871d96ad">medicionPH</a> &gt;= 6 &amp;&amp; <a class="code hl_variable" href="_examen_8c.html#a194b33ff09e2af8e76b05237871d96ad">medicionPH</a> &lt;= 6.7)</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    {</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="_examen_8c.html#a11261c2708b84e77c74d9be5ebe474ae">estadobombaPhB</a> = <span class="keyword">true</span>)</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>        {</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>            <a class="code hl_function" href="_examen_8c.html#a6123b9e1447ffff7e28bf8ae780504e5">controlPhB</a>();</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        }</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="_examen_8c.html#ae7cc32f3577cd3a8a33af3679090b220">estadoBombaPhA</a> = <span class="keyword">true</span>)</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        {</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>            <a class="code hl_function" href="_examen_8c.html#aebac455c20f742653e8b8531f5de5ed3">controlPhA</a>();</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        }</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    }</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>}</div>
+</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span> </div>
+<div class="foldopen" id="foldopen00271" data-start="{" data-end="}">
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno"><a class="line" href="_examen_8c.html#ab39b1a5545ad12d106b865e1b6d05bfc">  271</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_examen_8c.html#ab39b1a5545ad12d106b865e1b6d05bfc">informarEstadoSistema</a>()</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>{</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    {</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        ulTaskNotifyTake(pdTRUE, portMAX_DELAY);</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> </div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="_examen_8c.html#a37cdc2fef93a1c283850846484f18b28">estadoHumedad</a> = <span class="keyword">true</span>)</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>        {</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>            <a class="code hl_function" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>, <span class="stringliteral">&quot;PH: &quot;</span>);</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>            <a class="code hl_function" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>, (<span class="keywordtype">char</span> *)<a class="code hl_function" href="group___u_a_r_t.html#ga00c7e785d2874c52bab6e4dba88a5e23">UartItoa</a>(<a class="code hl_variable" href="_examen_8c.html#a194b33ff09e2af8e76b05237871d96ad">medicionPH</a>, 10));</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>            <a class="code hl_function" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>, <span class="stringliteral">&quot;, humedad correcta&quot;</span>);</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>            <a class="code hl_function" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>, <span class="stringliteral">&quot;\n\r&quot;</span>);</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        }</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="_examen_8c.html#a37cdc2fef93a1c283850846484f18b28">estadoHumedad</a> = <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>        {</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>            <a class="code hl_function" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>, <span class="stringliteral">&quot;PH: &quot;</span>);</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>            <a class="code hl_function" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>, (<span class="keywordtype">char</span> *)<a class="code hl_function" href="group___u_a_r_t.html#ga00c7e785d2874c52bab6e4dba88a5e23">UartItoa</a>(<a class="code hl_variable" href="_examen_8c.html#a194b33ff09e2af8e76b05237871d96ad">medicionPH</a>, 10));</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>            <a class="code hl_function" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>, <span class="stringliteral">&quot;, humedad incorrecta&quot;</span>);</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>            <a class="code hl_function" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>, <span class="stringliteral">&quot;\n\r&quot;</span>);</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>        }</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    }</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>}</div>
+</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span> </div>
+<div class="foldopen" id="foldopen00300" data-start="{" data-end="}">
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno"><a class="line" href="_examen_8c.html#a44a2fa16c6c53b66c6d9f8162818791d">  300</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_examen_8c.html#a44a2fa16c6c53b66c6d9f8162818791d">SistemaDeMediciones</a>()</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>{</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    {</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>        ulTaskNotifyTake(pdTRUE, portMAX_DELAY);</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>        <a class="code hl_function" href="_examen_8c.html#a0a67665730216f5105087c980c89d35b">medidorPH</a>();</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>        <a class="code hl_function" href="_examen_8c.html#a234c92e64ab6228c8b14dcfbf6e711e0">MedidorHumedad</a>();</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    }</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>}</div>
+</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span> </div>
+<div class="foldopen" id="foldopen00316" data-start="{" data-end="}">
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno"><a class="line" href="_examen_8c.html#a7bc33030fc2eca13254193b8176a7ad9">  316</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_examen_8c.html#a7bc33030fc2eca13254193b8176a7ad9">activarSistema</a>()</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>{</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    <a class="code hl_variable" href="_examen_8c.html#ae81847910f2120ae21b6a45e9fc866c4">teclaSistema</a> = 1;</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>}</div>
+</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span> </div>
+<div class="foldopen" id="foldopen00327" data-start="{" data-end="}">
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno"><a class="line" href="_examen_8c.html#a79d158c8910108d645f4b3f4e1d50d34">  327</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_examen_8c.html#a79d158c8910108d645f4b3f4e1d50d34">desactivarSistema</a>()</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>{</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    <a class="code hl_variable" href="_examen_8c.html#ae81847910f2120ae21b6a45e9fc866c4">teclaSistema</a> = 2;</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>}</div>
+</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span> </div>
+<div class="foldopen" id="foldopen00338" data-start="{" data-end="}">
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno"><a class="line" href="_examen_8c.html#adcfa6656662be613b1d7cbc8eb58ae7c">  338</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_examen_8c.html#adcfa6656662be613b1d7cbc8eb58ae7c">Sistema</a>()</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>{</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>    {</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span> </div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>        ulTaskNotifyTake(pdTRUE, portMAX_DELAY);</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span> </div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>        <a class="code hl_function" href="group___u_a_r_t.html#ga37f1b16880c3ca70ed2e543566d555d2">UartReadByte</a>(<a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>, &amp;<a class="code hl_variable" href="_examen_8c.html#ae81847910f2120ae21b6a45e9fc866c4">teclaSistema</a>);</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span> </div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="_examen_8c.html#ae81847910f2120ae21b6a45e9fc866c4">teclaSistema</a> == 1)</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>        {</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="_examen_8c.html#a367481b5beff07dd3d679d1a268f7919">estadoSistema</a> = <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>            {</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>                <a class="code hl_function" href="group___timer.html#ga80ed309959e5a179f5676ed4af547fa1">TimerReset</a>(<a class="code hl_enumvalue" href="group___timer.html#ggacc4e64394d03a6e790f8e52c674534d9a179b1231f027eba52fa4ef94ec174598">TIMER_A</a>);</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>                <a class="code hl_function" href="group___timer.html#ga80ed309959e5a179f5676ed4af547fa1">TimerReset</a>(<a class="code hl_enumvalue" href="group___timer.html#ggacc4e64394d03a6e790f8e52c674534d9a7537925211db58591cb5eeb7ebc7f44f">TIMER_B</a>);</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>                <a class="code hl_variable" href="_examen_8c.html#a367481b5beff07dd3d679d1a268f7919">estadoSistema</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>            }</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>        }</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="_examen_8c.html#ae81847910f2120ae21b6a45e9fc866c4">teclaSistema</a> == 2)</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>        {</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="_examen_8c.html#a367481b5beff07dd3d679d1a268f7919">estadoSistema</a> = <span class="keyword">true</span>)</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>            {</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="_examen_8c.html#ae7cc32f3577cd3a8a33af3679090b220">estadoBombaPhA</a> = <span class="keyword">true</span>)</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>                {</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>                    <a class="code hl_function" href="_examen_8c.html#aebac455c20f742653e8b8531f5de5ed3">controlPhA</a>();</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>                }</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="_examen_8c.html#a11261c2708b84e77c74d9be5ebe474ae">estadobombaPhB</a> = <span class="keyword">true</span>)</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>                {</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>                    <a class="code hl_function" href="_examen_8c.html#a6123b9e1447ffff7e28bf8ae780504e5">controlPhB</a>();</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>                }</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="_examen_8c.html#a28582a5585ef42b899878a95860f31df">estadoBombaRiego</a> = <span class="keyword">true</span>)</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>                {</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>                    <a class="code hl_function" href="_examen_8c.html#a65fc762aa35faf3133c57620fdc12c65">controlBombaRiego</a>();</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>                }</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span> </div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>                <a class="code hl_function" href="group___timer.html#ga0860e7ffff656386879c7dcd600d0629">TimerStop</a>(<a class="code hl_enumvalue" href="group___timer.html#ggacc4e64394d03a6e790f8e52c674534d9a179b1231f027eba52fa4ef94ec174598">TIMER_A</a>);</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>                <a class="code hl_function" href="group___timer.html#ga0860e7ffff656386879c7dcd600d0629">TimerStop</a>(<a class="code hl_enumvalue" href="group___timer.html#ggacc4e64394d03a6e790f8e52c674534d9a7537925211db58591cb5eeb7ebc7f44f">TIMER_B</a>);</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>                <a class="code hl_variable" href="_examen_8c.html#a367481b5beff07dd3d679d1a268f7919">estadoSistema</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>            }</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>        }</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>    }</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>}</div>
+</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span> </div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span><span class="comment">/*==================[external functions definition]==========================*/</span></div>
+<div class="foldopen" id="foldopen00382" data-start="{" data-end="}">
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno"><a class="line" href="_examen_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70">  382</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_examen_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70">app_main</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>{</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span> </div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>    <a class="code hl_function" href="group___analog___i_o.html#gab57399e946247652a096a0e2d3a1b69a">AnalogOutputInit</a>();</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span> </div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>    <span class="comment">// Parametros Timer</span></div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>    <a class="code hl_struct" href="structtimer__config__t.html">timer_config_t</a> timer_mediciones = {</div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>        .<a class="code hl_variable" href="structtimer__config__t.html#ab83043b8038c5e630f6a2a05ea007e49">timer</a> = <a class="code hl_enumvalue" href="group___timer.html#ggacc4e64394d03a6e790f8e52c674534d9a179b1231f027eba52fa4ef94ec174598">TIMER_A</a>,</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>        .period = 3000000,</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>        .func_p = <a class="code hl_function" href="_examen_8c.html#ad88aabd82073b37e3bde2727102369ba">FuncTimerSistemaDeMediciones</a>,</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>        .param_p = <a class="code hl_define" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>};</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span> </div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>    <a class="code hl_function" href="group___timer.html#gae8617c0d176463a60441464ad26563f6">TimerInit</a>(&amp;timer_mediciones);</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span> </div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>    <a class="code hl_struct" href="structtimer__config__t.html">timer_config_t</a> timer_informar_estado = {</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>        .<a class="code hl_variable" href="structtimer__config__t.html#ab83043b8038c5e630f6a2a05ea007e49">timer</a> = <a class="code hl_enumvalue" href="group___timer.html#ggacc4e64394d03a6e790f8e52c674534d9a7537925211db58591cb5eeb7ebc7f44f">TIMER_B</a>,</div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>        .period = 5000000,</div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>        .func_p = <a class="code hl_function" href="_examen_8c.html#af08c90a69c757a3f4ed3530e2f5e28e0">FuncTimerInformarEstadoSistema</a>,</div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>        .param_p = <a class="code hl_define" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>};</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span> </div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>    <a class="code hl_function" href="group___timer.html#gae8617c0d176463a60441464ad26563f6">TimerInit</a>(&amp;timer_informar_estado);</div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span> </div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>    <a class="code hl_struct" href="structtimer__config__t.html">timer_config_t</a> timer_sistema = {</div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>        .<a class="code hl_variable" href="structtimer__config__t.html#ab83043b8038c5e630f6a2a05ea007e49">timer</a> = <a class="code hl_enumvalue" href="group___timer.html#ggacc4e64394d03a6e790f8e52c674534d9a77982cc924eb33d3ea2f8f541f757f9d">TIMER_C</a>,</div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>        .period = 1000000,</div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>        .func_p = <a class="code hl_function" href="_examen_8c.html#a441a780838659ea9ce51e6b04c94146c">FuncTimerControlarSistema</a>,</div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>        .param_p = <a class="code hl_define" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>};</div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span> </div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>    <a class="code hl_function" href="group___timer.html#gae8617c0d176463a60441464ad26563f6">TimerInit</a>(&amp;timer_sistema);</div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span> </div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>    <a class="code hl_struct" href="structserial__config__t.html">serial_config_t</a> puertoserie = {</div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>        .<a class="code hl_variable" href="structserial__config__t.html#a27067c816e8c5402c7be0da9780678b0">port</a> = <a class="code hl_enumvalue" href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a>,</div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>        .baud_rate = 115200,</div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>        .func_p = <a class="code hl_define" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>        .param_p = <a class="code hl_define" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>};</div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span> </div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>    <a class="code hl_function" href="group___u_a_r_t.html#ga440f6a03dfd8b310f5fdf42c3bf20c42">UartInit</a>(&amp;puertoserie);</div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span> </div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>    <a class="code hl_struct" href="structanalog__input__config__t.html">analog_input_config_t</a> configHumedad = {</div>
+<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>        .<a class="code hl_variable" href="structanalog__input__config__t.html#a16d10b35d778a5d4fdbda4d75981d310">input</a> = <a class="code hl_enumvalue" href="group___analog___i_o.html#gga4ebdf50515e5d73c58c24fd1491770dca703cf81b7a9530ba8650e0ee2f29d68e">CH1</a>,</div>
+<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>        .mode = <a class="code hl_enumvalue" href="group___analog___i_o.html#gga51acd785c14953090a3507d4fa8e5939a3b0a8cf9a7759ea8b7c9494eb7fb3dd4">ADC_SINGLE</a>,</div>
+<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>    };</div>
+<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>    <a class="code hl_function" href="group___analog___i_o.html#ga24ce5556aa4682468220b982f151cdfe">AnalogInputInit</a>(&amp;configHumedad);</div>
+<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span> </div>
+<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>    <a class="code hl_struct" href="structanalog__input__config__t.html">analog_input_config_t</a> configPh = {</div>
+<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span>        .<a class="code hl_variable" href="structanalog__input__config__t.html#a16d10b35d778a5d4fdbda4d75981d310">input</a> = <a class="code hl_enumvalue" href="group___analog___i_o.html#gga4ebdf50515e5d73c58c24fd1491770dca703cf81b7a9530ba8650e0ee2f29d68e">CH1</a>,</div>
+<div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>        .mode = <a class="code hl_enumvalue" href="group___analog___i_o.html#gga51acd785c14953090a3507d4fa8e5939a3b0a8cf9a7759ea8b7c9494eb7fb3dd4">ADC_SINGLE</a>,</div>
+<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>    };</div>
+<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>    <a class="code hl_function" href="group___analog___i_o.html#ga24ce5556aa4682468220b982f151cdfe">AnalogInputInit</a>(&amp;configPh);</div>
+<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span> </div>
+<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>    <a class="code hl_function" href="group___switch.html#ga8eb2865a73bf2d2b9fd6760958a0cc3c">SwitchesInit</a>();</div>
+<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>    </div>
+<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>    <a class="code hl_function" href="group___switch.html#ga9847b9081e3cb39dd3ec01eaee8323b2">SwitchActivInt</a>(<a class="code hl_enumvalue" href="group___switch.html#gga8caa2df6d25fea5a14eb4533df1d5cfaa24caa46485c5fec2211b3ebd8a1eee77">SWITCH_1</a>, <a class="code hl_function" href="_examen_8c.html#a7bc33030fc2eca13254193b8176a7ad9">activarSistema</a>, <a class="code hl_define" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>    <a class="code hl_function" href="group___switch.html#ga9847b9081e3cb39dd3ec01eaee8323b2">SwitchActivInt</a>(<a class="code hl_enumvalue" href="group___switch.html#gga8caa2df6d25fea5a14eb4533df1d5cfaa73fda67835d5d51aa9251fee781a7434">SWITCH_2</a>, <a class="code hl_function" href="_examen_8c.html#a79d158c8910108d645f4b3f4e1d50d34">desactivarSistema</a>, <a class="code hl_define" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span> </div>
+<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span>    <a class="code hl_function" href="group___g_i_o_p.html#ga10240d283f64bd1b09fca664fda27964">GPIOInit</a>(<a class="code hl_enumvalue" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a8bdaec9182fb8ab2106d5c67f3eabd2d">GPIO_9</a>, <a class="code hl_enumvalue" href="group___g_i_o_p.html#gga423620ef7d69894833f70cfc395caaa9aa248e73c1faee9c6f072fd91569cf516">GPIO_OUTPUT</a>);</div>
+<div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span>    <a class="code hl_function" href="group___g_i_o_p.html#ga10240d283f64bd1b09fca664fda27964">GPIOInit</a>(<a class="code hl_enumvalue" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a3943e6071dec78b6bcf9586cf0de6dd3">GPIO_10</a>, <a class="code hl_enumvalue" href="group___g_i_o_p.html#gga423620ef7d69894833f70cfc395caaa9aa248e73c1faee9c6f072fd91569cf516">GPIO_OUTPUT</a>);</div>
+<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>    <a class="code hl_function" href="group___g_i_o_p.html#ga10240d283f64bd1b09fca664fda27964">GPIOInit</a>(<a class="code hl_enumvalue" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393af3ddb0db315daeab49b75dbca06ba6e5">GPIO_11</a>, <a class="code hl_enumvalue" href="group___g_i_o_p.html#gga423620ef7d69894833f70cfc395caaa9aa248e73c1faee9c6f072fd91569cf516">GPIO_OUTPUT</a>);</div>
+<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span> </div>
+<div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span>    xTaskCreate(&amp;<a class="code hl_function" href="_examen_8c.html#a44a2fa16c6c53b66c6d9f8162818791d">SistemaDeMediciones</a>, <span class="stringliteral">&quot;Mide PH y Humedad&quot;</span>, 2048, <a class="code hl_define" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, 5, &amp;<a class="code hl_variable" href="_examen_8c.html#a2f31c17eb7db66b3f19db620ff3cc912">Sistema_de_mediciones_task_handle</a>);</div>
+<div class="line"><a id="l00442" name="l00442"></a><span class="lineno">  442</span>    xTaskCreate(&amp;<a class="code hl_function" href="_examen_8c.html#ab39b1a5545ad12d106b865e1b6d05bfc">informarEstadoSistema</a>, <span class="stringliteral">&quot;Informa el estado del sistema&quot;</span>, 2048, <a class="code hl_define" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, 5, &amp;<a class="code hl_variable" href="_examen_8c.html#a1888832bcc2cad4a94ff791a459d101c">Informar_estado_sistema_task_handle</a>);</div>
+<div class="line"><a id="l00443" name="l00443"></a><span class="lineno">  443</span>    xTaskCreate(&amp;<a class="code hl_function" href="_examen_8c.html#adcfa6656662be613b1d7cbc8eb58ae7c">Sistema</a>, <span class="stringliteral">&quot;controla el estado del sistema&quot;</span>, 2048, <a class="code hl_define" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, 5, &amp;<a class="code hl_variable" href="_examen_8c.html#ae8cebe48a360c6b36116e4418691b81d">Controlar_Sistema_task_handle</a>);</div>
+<div class="line"><a id="l00444" name="l00444"></a><span class="lineno">  444</span> </div>
+<div class="line"><a id="l00445" name="l00445"></a><span class="lineno">  445</span>    <a class="code hl_function" href="group___timer.html#ga0b1779c5b8f91cc83c8bfd127071ea2f">TimerStart</a>(timer_mediciones.<a class="code hl_variable" href="structtimer__config__t.html#ab83043b8038c5e630f6a2a05ea007e49">timer</a>);</div>
+<div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span>    <a class="code hl_function" href="group___timer.html#ga0b1779c5b8f91cc83c8bfd127071ea2f">TimerStart</a>(timer_informar_estado.<a class="code hl_variable" href="structtimer__config__t.html#ab83043b8038c5e630f6a2a05ea007e49">timer</a>);</div>
+<div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span>    <a class="code hl_function" href="group___timer.html#ga0b1779c5b8f91cc83c8bfd127071ea2f">TimerStart</a>(timer_sistema.<a class="code hl_variable" href="structtimer__config__t.html#ab83043b8038c5e630f6a2a05ea007e49">timer</a>);</div>
+<div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span>}</div>
+</div>
+<div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span><span class="comment">/*==================[end of file]============================================*/</span></div>
+<div class="ttc" id="a_examen_8c_html_a0a67665730216f5105087c980c89d35b"><div class="ttname"><a href="_examen_8c.html#a0a67665730216f5105087c980c89d35b">medidorPH</a></div><div class="ttdeci">void medidorPH()</div><div class="ttdoc">controla el PH, si es menor a 6 activa bomba B y desactiva A , si es mayor a 6.7 activa bomba A y des...</div><div class="ttdef"><b>Definition</b> <a href="#l00224">Examen.c:224</a></div></div>
+<div class="ttc" id="a_examen_8c_html_a11261c2708b84e77c74d9be5ebe474ae"><div class="ttname"><a href="_examen_8c.html#a11261c2708b84e77c74d9be5ebe474ae">estadobombaPhB</a></div><div class="ttdeci">bool estadobombaPhB</div><div class="ttdef"><b>Definition</b> <a href="#l00051">Examen.c:51</a></div></div>
+<div class="ttc" id="a_examen_8c_html_a1888832bcc2cad4a94ff791a459d101c"><div class="ttname"><a href="_examen_8c.html#a1888832bcc2cad4a94ff791a459d101c">Informar_estado_sistema_task_handle</a></div><div class="ttdeci">TaskHandle_t Informar_estado_sistema_task_handle</div><div class="ttdef"><b>Definition</b> <a href="#l00059">Examen.c:59</a></div></div>
+<div class="ttc" id="a_examen_8c_html_a194b33ff09e2af8e76b05237871d96ad"><div class="ttname"><a href="_examen_8c.html#a194b33ff09e2af8e76b05237871d96ad">medicionPH</a></div><div class="ttdeci">int16_t medicionPH</div><div class="ttdoc">Variables donde se guardan las mediciones.</div><div class="ttdef"><b>Definition</b> <a href="#l00036">Examen.c:36</a></div></div>
+<div class="ttc" id="a_examen_8c_html_a1992b6d21ff94ffe20018724920c74a5"><div class="ttname"><a href="_examen_8c.html#a1992b6d21ff94ffe20018724920c74a5">medicionHumedad</a></div><div class="ttdeci">int16_t medicionHumedad</div><div class="ttdef"><b>Definition</b> <a href="#l00037">Examen.c:37</a></div></div>
+<div class="ttc" id="a_examen_8c_html_a234c92e64ab6228c8b14dcfbf6e711e0"><div class="ttname"><a href="_examen_8c.html#a234c92e64ab6228c8b14dcfbf6e711e0">MedidorHumedad</a></div><div class="ttdeci">void MedidorHumedad()</div><div class="ttdoc">controla el estado de la humedad, si es baja activa bomba de riego, si es alta lo desactiva</div><div class="ttdef"><b>Definition</b> <a href="#l00196">Examen.c:196</a></div></div>
+<div class="ttc" id="a_examen_8c_html_a28582a5585ef42b899878a95860f31df"><div class="ttname"><a href="_examen_8c.html#a28582a5585ef42b899878a95860f31df">estadoBombaRiego</a></div><div class="ttdeci">bool estadoBombaRiego</div><div class="ttdoc">Variables booleanas donde se almacena si una bomba esta encendida o apagada.</div><div class="ttdef"><b>Definition</b> <a href="#l00049">Examen.c:49</a></div></div>
+<div class="ttc" id="a_examen_8c_html_a2f31c17eb7db66b3f19db620ff3cc912"><div class="ttname"><a href="_examen_8c.html#a2f31c17eb7db66b3f19db620ff3cc912">Sistema_de_mediciones_task_handle</a></div><div class="ttdeci">TaskHandle_t Sistema_de_mediciones_task_handle</div><div class="ttdoc">Task Handlers.</div><div class="ttdef"><b>Definition</b> <a href="#l00058">Examen.c:58</a></div></div>
+<div class="ttc" id="a_examen_8c_html_a367481b5beff07dd3d679d1a268f7919"><div class="ttname"><a href="_examen_8c.html#a367481b5beff07dd3d679d1a268f7919">estadoSistema</a></div><div class="ttdeci">bool estadoSistema</div><div class="ttdef"><b>Definition</b> <a href="#l00053">Examen.c:53</a></div></div>
+<div class="ttc" id="a_examen_8c_html_a37cdc2fef93a1c283850846484f18b28"><div class="ttname"><a href="_examen_8c.html#a37cdc2fef93a1c283850846484f18b28">estadoHumedad</a></div><div class="ttdeci">bool estadoHumedad</div><div class="ttdef"><b>Definition</b> <a href="#l00052">Examen.c:52</a></div></div>
+<div class="ttc" id="a_examen_8c_html_a3c89bec3e41b2e2601b729393c955e42"><div class="ttname"><a href="_examen_8c.html#a3c89bec3e41b2e2601b729393c955e42">SensorTension</a></div><div class="ttdeci">void SensorTension()</div><div class="ttdoc">Mide el ph que se sensa en voltios y lo guarda en medicionTension.</div><div class="ttdef"><b>Definition</b> <a href="#l00125">Examen.c:125</a></div></div>
+<div class="ttc" id="a_examen_8c_html_a441a780838659ea9ce51e6b04c94146c"><div class="ttname"><a href="_examen_8c.html#a441a780838659ea9ce51e6b04c94146c">FuncTimerControlarSistema</a></div><div class="ttdeci">void FuncTimerControlarSistema(void *param)</div><div class="ttdoc">Funcion del timer C que controla el apagado o encendido del sistema.</div><div class="ttdef"><b>Definition</b> <a href="#l00095">Examen.c:95</a></div></div>
+<div class="ttc" id="a_examen_8c_html_a44a2fa16c6c53b66c6d9f8162818791d"><div class="ttname"><a href="_examen_8c.html#a44a2fa16c6c53b66c6d9f8162818791d">SistemaDeMediciones</a></div><div class="ttdeci">void SistemaDeMediciones()</div><div class="ttdoc">controla las mediciones de la humedad y el ph</div><div class="ttdef"><b>Definition</b> <a href="#l00300">Examen.c:300</a></div></div>
+<div class="ttc" id="a_examen_8c_html_a6123b9e1447ffff7e28bf8ae780504e5"><div class="ttname"><a href="_examen_8c.html#a6123b9e1447ffff7e28bf8ae780504e5">controlPhB</a></div><div class="ttdeci">void controlPhB()</div><div class="ttdoc">controla el estado de la bomba de PH basico, permite activar/desactivar y avisa cuando esta activa</div><div class="ttdef"><b>Definition</b> <a href="#l00176">Examen.c:176</a></div></div>
+<div class="ttc" id="a_examen_8c_html_a630544a7f0a2cc40d8a7fefab7e2fe70"><div class="ttname"><a href="_examen_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70">app_main</a></div><div class="ttdeci">void app_main(void)</div><div class="ttdef"><b>Definition</b> <a href="#l00382">Examen.c:382</a></div></div>
+<div class="ttc" id="a_examen_8c_html_a65fc762aa35faf3133c57620fdc12c65"><div class="ttname"><a href="_examen_8c.html#a65fc762aa35faf3133c57620fdc12c65">controlBombaRiego</a></div><div class="ttdeci">void controlBombaRiego()</div><div class="ttdoc">controla el estado de la bomba de riego, permite activar y desactivar y avisa cuando esta activa</div><div class="ttdef"><b>Definition</b> <a href="#l00136">Examen.c:136</a></div></div>
+<div class="ttc" id="a_examen_8c_html_a79d158c8910108d645f4b3f4e1d50d34"><div class="ttname"><a href="_examen_8c.html#a79d158c8910108d645f4b3f4e1d50d34">desactivarSistema</a></div><div class="ttdeci">void desactivarSistema()</div><div class="ttdoc">modifica la variable tecla a valor de apagado</div><div class="ttdef"><b>Definition</b> <a href="#l00327">Examen.c:327</a></div></div>
+<div class="ttc" id="a_examen_8c_html_a7bc33030fc2eca13254193b8176a7ad9"><div class="ttname"><a href="_examen_8c.html#a7bc33030fc2eca13254193b8176a7ad9">activarSistema</a></div><div class="ttdeci">void activarSistema()</div><div class="ttdoc">modifica la variable tecla a valor de encendido</div><div class="ttdef"><b>Definition</b> <a href="#l00316">Examen.c:316</a></div></div>
+<div class="ttc" id="a_examen_8c_html_a7e5e922c4097dad08b50e04f23d7416f"><div class="ttname"><a href="_examen_8c.html#a7e5e922c4097dad08b50e04f23d7416f">SensorDeRiego</a></div><div class="ttdeci">void SensorDeRiego()</div><div class="ttdoc">mide la humedad y la guarda en la variable medicionHumedad</div><div class="ttdef"><b>Definition</b> <a href="#l00114">Examen.c:114</a></div></div>
+<div class="ttc" id="a_examen_8c_html_a815a9305e9d78a91240210f302ebdd96"><div class="ttname"><a href="_examen_8c.html#a815a9305e9d78a91240210f302ebdd96">medicionTension</a></div><div class="ttdeci">float medicionTension</div><div class="ttdef"><b>Definition</b> <a href="#l00038">Examen.c:38</a></div></div>
+<div class="ttc" id="a_examen_8c_html_a8c781f7c2e9dcba4f065e4ef60da7fde"><div class="ttname"><a href="_examen_8c.html#a8c781f7c2e9dcba4f065e4ef60da7fde">cteConversionVoltaPH</a></div><div class="ttdeci">float cteConversionVoltaPH</div><div class="ttdoc">constante de converion de tension a PH</div><div class="ttdef"><b>Definition</b> <a href="#l00044">Examen.c:44</a></div></div>
+<div class="ttc" id="a_examen_8c_html_ab39b1a5545ad12d106b865e1b6d05bfc"><div class="ttname"><a href="_examen_8c.html#ab39b1a5545ad12d106b865e1b6d05bfc">informarEstadoSistema</a></div><div class="ttdeci">void informarEstadoSistema()</div><div class="ttdoc">informa por mensaje de la UART el estado de la humedad y el ph</div><div class="ttdef"><b>Definition</b> <a href="#l00271">Examen.c:271</a></div></div>
+<div class="ttc" id="a_examen_8c_html_ad88aabd82073b37e3bde2727102369ba"><div class="ttname"><a href="_examen_8c.html#ad88aabd82073b37e3bde2727102369ba">FuncTimerSistemaDeMediciones</a></div><div class="ttdeci">void FuncTimerSistemaDeMediciones(void *param)</div><div class="ttdoc">Funcion del timer A que controla sistema de mediciones.</div><div class="ttdef"><b>Definition</b> <a href="#l00073">Examen.c:73</a></div></div>
+<div class="ttc" id="a_examen_8c_html_adcfa6656662be613b1d7cbc8eb58ae7c"><div class="ttname"><a href="_examen_8c.html#adcfa6656662be613b1d7cbc8eb58ae7c">Sistema</a></div><div class="ttdeci">void Sistema()</div><div class="ttdoc">Controla el sistema completo, permite prender o apagar el sistema. Al encender resetea los timers....</div><div class="ttdef"><b>Definition</b> <a href="#l00338">Examen.c:338</a></div></div>
+<div class="ttc" id="a_examen_8c_html_ae7cc32f3577cd3a8a33af3679090b220"><div class="ttname"><a href="_examen_8c.html#ae7cc32f3577cd3a8a33af3679090b220">estadoBombaPhA</a></div><div class="ttdeci">bool estadoBombaPhA</div><div class="ttdef"><b>Definition</b> <a href="#l00050">Examen.c:50</a></div></div>
+<div class="ttc" id="a_examen_8c_html_ae81847910f2120ae21b6a45e9fc866c4"><div class="ttname"><a href="_examen_8c.html#ae81847910f2120ae21b6a45e9fc866c4">teclaSistema</a></div><div class="ttdeci">int8_t teclaSistema</div><div class="ttdef"><b>Definition</b> <a href="#l00039">Examen.c:39</a></div></div>
+<div class="ttc" id="a_examen_8c_html_ae8cebe48a360c6b36116e4418691b81d"><div class="ttname"><a href="_examen_8c.html#ae8cebe48a360c6b36116e4418691b81d">Controlar_Sistema_task_handle</a></div><div class="ttdeci">TaskHandle_t Controlar_Sistema_task_handle</div><div class="ttdef"><b>Definition</b> <a href="#l00060">Examen.c:60</a></div></div>
+<div class="ttc" id="a_examen_8c_html_aebac455c20f742653e8b8531f5de5ed3"><div class="ttname"><a href="_examen_8c.html#aebac455c20f742653e8b8531f5de5ed3">controlPhA</a></div><div class="ttdeci">void controlPhA()</div><div class="ttdoc">controla el estado de la bomba de PH acido, permite activar/desactivar y avisa cuando esta activa</div><div class="ttdef"><b>Definition</b> <a href="#l00156">Examen.c:156</a></div></div>
+<div class="ttc" id="a_examen_8c_html_af08c90a69c757a3f4ed3530e2f5e28e0"><div class="ttname"><a href="_examen_8c.html#af08c90a69c757a3f4ed3530e2f5e28e0">FuncTimerInformarEstadoSistema</a></div><div class="ttdeci">void FuncTimerInformarEstadoSistema(void *param)</div><div class="ttdoc">Funcion del timer B que controla mostrar la informacion del sistema.</div><div class="ttdef"><b>Definition</b> <a href="#l00084">Examen.c:84</a></div></div>
+<div class="ttc" id="aanalog__io__mcu_8h_html"><div class="ttname"><a href="analog__io__mcu_8h.html">analog_io_mcu.h</a></div></div>
+<div class="ttc" id="agroup___analog___i_o_html_ga24ce5556aa4682468220b982f151cdfe"><div class="ttname"><a href="group___analog___i_o.html#ga24ce5556aa4682468220b982f151cdfe">AnalogInputInit</a></div><div class="ttdeci">void AnalogInputInit(analog_input_config_t *config)</div><div class="ttdoc">Analog input initialization.</div><div class="ttdef"><b>Definition</b> <a href="analog__io__mcu_8c_source.html#l00045">analog_io_mcu.c:45</a></div></div>
+<div class="ttc" id="agroup___analog___i_o_html_gab57399e946247652a096a0e2d3a1b69a"><div class="ttname"><a href="group___analog___i_o.html#gab57399e946247652a096a0e2d3a1b69a">AnalogOutputInit</a></div><div class="ttdeci">void AnalogOutputInit(void)</div><div class="ttdoc">Analog output initialization (DAC)</div><div class="ttdef"><b>Definition</b> <a href="analog__io__mcu_8c_source.html#l00095">analog_io_mcu.c:95</a></div></div>
+<div class="ttc" id="agroup___analog___i_o_html_gab5ae00a35744f407072230979e593fd9"><div class="ttname"><a href="group___analog___i_o.html#gab5ae00a35744f407072230979e593fd9">AnalogInputReadSingle</a></div><div class="ttdeci">void AnalogInputReadSingle(adc_ch_t channel, uint16_t *value)</div><div class="ttdoc">Read single channel.</div><div class="ttdef"><b>Definition</b> <a href="analog__io__mcu_8c_source.html#l00105">analog_io_mcu.c:105</a></div></div>
+<div class="ttc" id="agroup___analog___i_o_html_gga4ebdf50515e5d73c58c24fd1491770dca703cf81b7a9530ba8650e0ee2f29d68e"><div class="ttname"><a href="group___analog___i_o.html#gga4ebdf50515e5d73c58c24fd1491770dca703cf81b7a9530ba8650e0ee2f29d68e">CH1</a></div><div class="ttdeci">@ CH1</div><div class="ttdef"><b>Definition</b> <a href="analog__io__mcu_8h_source.html#l00032">analog_io_mcu.h:32</a></div></div>
+<div class="ttc" id="agroup___analog___i_o_html_gga4ebdf50515e5d73c58c24fd1491770dcae574b39c34bd88c27ea641014831e53a"><div class="ttname"><a href="group___analog___i_o.html#gga4ebdf50515e5d73c58c24fd1491770dcae574b39c34bd88c27ea641014831e53a">CH2</a></div><div class="ttdeci">@ CH2</div><div class="ttdef"><b>Definition</b> <a href="analog__io__mcu_8h_source.html#l00033">analog_io_mcu.h:33</a></div></div>
+<div class="ttc" id="agroup___analog___i_o_html_gga51acd785c14953090a3507d4fa8e5939a3b0a8cf9a7759ea8b7c9494eb7fb3dd4"><div class="ttname"><a href="group___analog___i_o.html#gga51acd785c14953090a3507d4fa8e5939a3b0a8cf9a7759ea8b7c9494eb7fb3dd4">ADC_SINGLE</a></div><div class="ttdeci">@ ADC_SINGLE</div><div class="ttdef"><b>Definition</b> <a href="analog__io__mcu_8h_source.html#l00038">analog_io_mcu.h:38</a></div></div>
+<div class="ttc" id="agroup___g_i_o_p_html_ga10240d283f64bd1b09fca664fda27964"><div class="ttname"><a href="group___g_i_o_p.html#ga10240d283f64bd1b09fca664fda27964">GPIOInit</a></div><div class="ttdeci">void GPIOInit(gpio_t pin, io_t io)</div><div class="ttdoc">GPIO initialization.</div><div class="ttdef"><b>Definition</b> <a href="gpio__mcu_8c_source.html#l00067">gpio_mcu.c:67</a></div></div>
+<div class="ttc" id="agroup___g_i_o_p_html_ga30ed9d97406129b9b6390154a7479d70"><div class="ttname"><a href="group___g_i_o_p.html#ga30ed9d97406129b9b6390154a7479d70">GPIOOff</a></div><div class="ttdeci">void GPIOOff(gpio_t pin)</div><div class="ttdoc">Change GPIO state to low.</div><div class="ttdef"><b>Definition</b> <a href="gpio__mcu_8c_source.html#l00086">gpio_mcu.c:86</a></div></div>
+<div class="ttc" id="agroup___g_i_o_p_html_gaba62250f2b0e73a98b6f35fb6078fdb1"><div class="ttname"><a href="group___g_i_o_p.html#gaba62250f2b0e73a98b6f35fb6078fdb1">GPIOOn</a></div><div class="ttdeci">void GPIOOn(gpio_t pin)</div><div class="ttdoc">Change GPIO state to high.</div><div class="ttdef"><b>Definition</b> <a href="gpio__mcu_8c_source.html#l00081">gpio_mcu.c:81</a></div></div>
+<div class="ttc" id="agroup___g_i_o_p_html_gga423620ef7d69894833f70cfc395caaa9aa248e73c1faee9c6f072fd91569cf516"><div class="ttname"><a href="group___g_i_o_p.html#gga423620ef7d69894833f70cfc395caaa9aa248e73c1faee9c6f072fd91569cf516">GPIO_OUTPUT</a></div><div class="ttdeci">@ GPIO_OUTPUT</div><div class="ttdef"><b>Definition</b> <a href="gpio__mcu_8h_source.html#l00045">gpio_mcu.h:44</a></div></div>
+<div class="ttc" id="agroup___g_i_o_p_html_ggaf65604147d0244c9b13cfdc865ad5393a3943e6071dec78b6bcf9586cf0de6dd3"><div class="ttname"><a href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a3943e6071dec78b6bcf9586cf0de6dd3">GPIO_10</a></div><div class="ttdeci">@ GPIO_10</div><div class="ttdef"><b>Definition</b> <a href="gpio__mcu_8h_source.html#l00062">gpio_mcu.h:62</a></div></div>
+<div class="ttc" id="agroup___g_i_o_p_html_ggaf65604147d0244c9b13cfdc865ad5393a8bdaec9182fb8ab2106d5c67f3eabd2d"><div class="ttname"><a href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a8bdaec9182fb8ab2106d5c67f3eabd2d">GPIO_9</a></div><div class="ttdeci">@ GPIO_9</div><div class="ttdef"><b>Definition</b> <a href="gpio__mcu_8h_source.html#l00061">gpio_mcu.h:61</a></div></div>
+<div class="ttc" id="agroup___g_i_o_p_html_ggaf65604147d0244c9b13cfdc865ad5393af3ddb0db315daeab49b75dbca06ba6e5"><div class="ttname"><a href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393af3ddb0db315daeab49b75dbca06ba6e5">GPIO_11</a></div><div class="ttdeci">@ GPIO_11</div><div class="ttdef"><b>Definition</b> <a href="gpio__mcu_8h_source.html#l00063">gpio_mcu.h:63</a></div></div>
+<div class="ttc" id="agroup___switch_html_ga8eb2865a73bf2d2b9fd6760958a0cc3c"><div class="ttname"><a href="group___switch.html#ga8eb2865a73bf2d2b9fd6760958a0cc3c">SwitchesInit</a></div><div class="ttdeci">int8_t SwitchesInit(void)</div><div class="ttdoc">ESP-EDU switches initialization.</div><div class="ttdef"><b>Definition</b> <a href="switch_8c_source.html#l00029">switch.c:29</a></div></div>
+<div class="ttc" id="agroup___switch_html_ga9847b9081e3cb39dd3ec01eaee8323b2"><div class="ttname"><a href="group___switch.html#ga9847b9081e3cb39dd3ec01eaee8323b2">SwitchActivInt</a></div><div class="ttdeci">void SwitchActivInt(switch_t tec, void *ptrIntFunc, void *args)</div><div class="ttdoc">Enables the interruption of a particular key and assigns a callback function.</div><div class="ttdef"><b>Definition</b> <a href="switch_8c_source.html#l00047">switch.c:47</a></div></div>
+<div class="ttc" id="agroup___switch_html_gga8caa2df6d25fea5a14eb4533df1d5cfaa24caa46485c5fec2211b3ebd8a1eee77"><div class="ttname"><a href="group___switch.html#gga8caa2df6d25fea5a14eb4533df1d5cfaa24caa46485c5fec2211b3ebd8a1eee77">SWITCH_1</a></div><div class="ttdeci">@ SWITCH_1</div><div class="ttdef"><b>Definition</b> <a href="switch_8h_source.html#l00032">switch.h:32</a></div></div>
+<div class="ttc" id="agroup___switch_html_gga8caa2df6d25fea5a14eb4533df1d5cfaa73fda67835d5d51aa9251fee781a7434"><div class="ttname"><a href="group___switch.html#gga8caa2df6d25fea5a14eb4533df1d5cfaa73fda67835d5d51aa9251fee781a7434">SWITCH_2</a></div><div class="ttdeci">@ SWITCH_2</div><div class="ttdef"><b>Definition</b> <a href="switch_8h_source.html#l00033">switch.h:33</a></div></div>
+<div class="ttc" id="agroup___timer_html_ga0860e7ffff656386879c7dcd600d0629"><div class="ttname"><a href="group___timer.html#ga0860e7ffff656386879c7dcd600d0629">TimerStop</a></div><div class="ttdeci">void TimerStop(timer_mcu_t timer)</div><div class="ttdoc">Pause timer.</div><div class="ttdef"><b>Definition</b> <a href="timer__mcu_8c_source.html#l00124">timer_mcu.c:124</a></div></div>
+<div class="ttc" id="agroup___timer_html_ga0b1779c5b8f91cc83c8bfd127071ea2f"><div class="ttname"><a href="group___timer.html#ga0b1779c5b8f91cc83c8bfd127071ea2f">TimerStart</a></div><div class="ttdeci">void TimerStart(timer_mcu_t timer)</div><div class="ttdoc">Start timer count.</div><div class="ttdef"><b>Definition</b> <a href="timer__mcu_8c_source.html#l00110">timer_mcu.c:110</a></div></div>
+<div class="ttc" id="agroup___timer_html_ga80ed309959e5a179f5676ed4af547fa1"><div class="ttname"><a href="group___timer.html#ga80ed309959e5a179f5676ed4af547fa1">TimerReset</a></div><div class="ttdeci">void TimerReset(timer_mcu_t timer)</div><div class="ttdoc">Reset timer count to 0.</div><div class="ttdef"><b>Definition</b> <a href="timer__mcu_8c_source.html#l00138">timer_mcu.c:138</a></div></div>
+<div class="ttc" id="agroup___timer_html_gae8617c0d176463a60441464ad26563f6"><div class="ttname"><a href="group___timer.html#gae8617c0d176463a60441464ad26563f6">TimerInit</a></div><div class="ttdeci">void TimerInit(timer_config_t *timer_ini)</div><div class="ttdoc">Timer initialization.</div><div class="ttdef"><b>Definition</b> <a href="timer__mcu_8c_source.html#l00055">timer_mcu.c:55</a></div></div>
+<div class="ttc" id="agroup___timer_html_ggacc4e64394d03a6e790f8e52c674534d9a179b1231f027eba52fa4ef94ec174598"><div class="ttname"><a href="group___timer.html#ggacc4e64394d03a6e790f8e52c674534d9a179b1231f027eba52fa4ef94ec174598">TIMER_A</a></div><div class="ttdeci">@ TIMER_A</div><div class="ttdef"><b>Definition</b> <a href="timer__mcu_8h_source.html#l00032">timer_mcu.h:32</a></div></div>
+<div class="ttc" id="agroup___timer_html_ggacc4e64394d03a6e790f8e52c674534d9a7537925211db58591cb5eeb7ebc7f44f"><div class="ttname"><a href="group___timer.html#ggacc4e64394d03a6e790f8e52c674534d9a7537925211db58591cb5eeb7ebc7f44f">TIMER_B</a></div><div class="ttdeci">@ TIMER_B</div><div class="ttdef"><b>Definition</b> <a href="timer__mcu_8h_source.html#l00033">timer_mcu.h:33</a></div></div>
+<div class="ttc" id="agroup___timer_html_ggacc4e64394d03a6e790f8e52c674534d9a77982cc924eb33d3ea2f8f541f757f9d"><div class="ttname"><a href="group___timer.html#ggacc4e64394d03a6e790f8e52c674534d9a77982cc924eb33d3ea2f8f541f757f9d">TIMER_C</a></div><div class="ttdeci">@ TIMER_C</div><div class="ttdef"><b>Definition</b> <a href="timer__mcu_8h_source.html#l00035">timer_mcu.h:34</a></div></div>
+<div class="ttc" id="agroup___u_a_r_t_html_ga00c7e785d2874c52bab6e4dba88a5e23"><div class="ttname"><a href="group___u_a_r_t.html#ga00c7e785d2874c52bab6e4dba88a5e23">UartItoa</a></div><div class="ttdeci">uint8_t * UartItoa(uint32_t val, uint8_t base)</div><div class="ttdoc">Convert a number to a String (char array ended with '\0')</div><div class="ttdef"><b>Definition</b> <a href="uart__mcu_8c_source.html#l00222">uart_mcu.c:222</a></div></div>
+<div class="ttc" id="agroup___u_a_r_t_html_ga37f1b16880c3ca70ed2e543566d555d2"><div class="ttname"><a href="group___u_a_r_t.html#ga37f1b16880c3ca70ed2e543566d555d2">UartReadByte</a></div><div class="ttdeci">uint8_t UartReadByte(uart_mcu_port_t port, uint8_t *data)</div><div class="ttdoc">Read a single byte from serial port.</div><div class="ttdef"><b>Definition</b> <a href="uart__mcu_8c_source.html#l00142">uart_mcu.c:142</a></div></div>
+<div class="ttc" id="agroup___u_a_r_t_html_ga440f6a03dfd8b310f5fdf42c3bf20c42"><div class="ttname"><a href="group___u_a_r_t.html#ga440f6a03dfd8b310f5fdf42c3bf20c42">UartInit</a></div><div class="ttdeci">void UartInit(serial_config_t *port_config)</div><div class="ttdoc">Serial port initialization.</div><div class="ttdef"><b>Definition</b> <a href="uart__mcu_8c_source.html#l00107">uart_mcu.c:107</a></div></div>
+<div class="ttc" id="agroup___u_a_r_t_html_ga60db217694ea24ad75fcedda3336a3a8"><div class="ttname"><a href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8">UartSendString</a></div><div class="ttdeci">void UartSendString(uart_mcu_port_t port, const char *msg)</div><div class="ttdoc">Send a String trough serial port.</div><div class="ttdef"><b>Definition</b> <a href="uart__mcu_8c_source.html#l00193">uart_mcu.c:193</a></div></div>
+<div class="ttc" id="agroup___u_a_r_t_html_gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056"><div class="ttname"><a href="group___u_a_r_t.html#gga6e1a445bae87c4cfd26710dbd4657b77af81669fbb473eedf3d1789fcf08d9056">UART_PC</a></div><div class="ttdeci">@ UART_PC</div><div class="ttdef"><b>Definition</b> <a href="uart__mcu_8h_source.html#l00032">uart_mcu.h:32</a></div></div>
+<div class="ttc" id="ahc__sr04_8h_html"><div class="ttname"><a href="hc__sr04_8h.html">hc_sr04.h</a></div></div>
+<div class="ttc" id="aili9341_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="ili9341_8c_source.html#l00042">ili9341.c:42</a></div></div>
+<div class="ttc" id="aled_8h_html"><div class="ttname"><a href="led_8h.html">led.h</a></div></div>
+<div class="ttc" id="astructanalog__input__config__t_html"><div class="ttname"><a href="structanalog__input__config__t.html">analog_input_config_t</a></div><div class="ttdoc">Analog inputs config structure.</div><div class="ttdef"><b>Definition</b> <a href="analog__io__mcu_8h_source.html#l00048">analog_io_mcu.h:48</a></div></div>
+<div class="ttc" id="astructanalog__input__config__t_html_a16d10b35d778a5d4fdbda4d75981d310"><div class="ttname"><a href="structanalog__input__config__t.html#a16d10b35d778a5d4fdbda4d75981d310">analog_input_config_t::input</a></div><div class="ttdeci">adc_ch_t input</div><div class="ttdef"><b>Definition</b> <a href="analog__io__mcu_8h_source.html#l00049">analog_io_mcu.h:49</a></div></div>
+<div class="ttc" id="astructserial__config__t_html"><div class="ttname"><a href="structserial__config__t.html">serial_config_t</a></div><div class="ttdoc">Serial port configuration struct.</div><div class="ttdef"><b>Definition</b> <a href="uart__mcu_8h_source.html#l00038">uart_mcu.h:38</a></div></div>
+<div class="ttc" id="astructserial__config__t_html_a27067c816e8c5402c7be0da9780678b0"><div class="ttname"><a href="structserial__config__t.html#a27067c816e8c5402c7be0da9780678b0">serial_config_t::port</a></div><div class="ttdeci">uart_mcu_port_t port</div><div class="ttdef"><b>Definition</b> <a href="uart__mcu_8h_source.html#l00039">uart_mcu.h:39</a></div></div>
+<div class="ttc" id="astructtimer__config__t_html"><div class="ttname"><a href="structtimer__config__t.html">timer_config_t</a></div><div class="ttdoc">Timer configuration struct.</div><div class="ttdef"><b>Definition</b> <a href="timer__mcu_8h_source.html#l00039">timer_mcu.h:39</a></div></div>
+<div class="ttc" id="astructtimer__config__t_html_ab83043b8038c5e630f6a2a05ea007e49"><div class="ttname"><a href="structtimer__config__t.html#ab83043b8038c5e630f6a2a05ea007e49">timer_config_t::timer</a></div><div class="ttdeci">timer_mcu_t timer</div><div class="ttdef"><b>Definition</b> <a href="timer__mcu_8h_source.html#l00040">timer_mcu.h:40</a></div></div>
+<div class="ttc" id="aswitch_8h_html"><div class="ttname"><a href="switch_8h.html">switch.h</a></div></div>
+<div class="ttc" id="atimer__mcu_8h_html"><div class="ttname"><a href="timer__mcu_8h.html">timer_mcu.h</a></div></div>
+<div class="ttc" id="auart__mcu_8h_html"><div class="ttname"><a href="uart__mcu_8h.html">uart_mcu.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_ab63d5a53c3c8fed5134bd78a3022a7d.html">Regosky-1C-2024</a></li><li class="navelem"><a class="el" href="dir_fceefab9dc94842543ea2930b8407b3c.html">firmware</a></li><li class="navelem"><a class="el" href="dir_93ac6964fd6bfb0545c0816ab83cd594.html">projects</a></li><li class="navelem"><a class="el" href="dir_d0d9d0f0afdc5be6e3db7b9afa66f93d.html">Examen</a></li><li class="navelem"><a class="el" href="dir_c134e6305575bfebc49e4b0599637f17.html">main</a></li><li class="navelem"><a class="el" href="_examen_8c.html">Examen.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+  </ul>
+</div>
+</body>
+</html>

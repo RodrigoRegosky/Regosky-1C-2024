@@ -1,0 +1,874 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Examen: Referencia del archivo C:/Repositorios/Regosky-1C-2024/firmware/projects/Examen/main/Examen.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Examen<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_examen_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del archivo Examen.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &quot;freertos/FreeRTOS.h&quot;</code><br />
+<code>#include &quot;freertos/task.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="led_8h_source.html">led.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="hc__sr04_8h_source.html">hc_sr04.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="switch_8h_source.html">switch.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="timer__mcu_8h_source.html">timer_mcu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="uart__mcu_8h_source.html">uart_mcu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="analog__io__mcu_8h_source.html">analog_io_mcu.h</a>&quot;</code><br />
+</div>
+<p><a href="_examen_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:ad88aabd82073b37e3bde2727102369ba" id="r_ad88aabd82073b37e3bde2727102369ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad88aabd82073b37e3bde2727102369ba">FuncTimerSistemaDeMediciones</a> (void *param)</td></tr>
+<tr class="memdesc:ad88aabd82073b37e3bde2727102369ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion del timer A que controla sistema de mediciones.  <br /></td></tr>
+<tr class="separator:ad88aabd82073b37e3bde2727102369ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af08c90a69c757a3f4ed3530e2f5e28e0" id="r_af08c90a69c757a3f4ed3530e2f5e28e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af08c90a69c757a3f4ed3530e2f5e28e0">FuncTimerInformarEstadoSistema</a> (void *param)</td></tr>
+<tr class="memdesc:af08c90a69c757a3f4ed3530e2f5e28e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion del timer B que controla mostrar la informacion del sistema.  <br /></td></tr>
+<tr class="separator:af08c90a69c757a3f4ed3530e2f5e28e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a441a780838659ea9ce51e6b04c94146c" id="r_a441a780838659ea9ce51e6b04c94146c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a441a780838659ea9ce51e6b04c94146c">FuncTimerControlarSistema</a> (void *param)</td></tr>
+<tr class="memdesc:a441a780838659ea9ce51e6b04c94146c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion del timer C que controla el apagado o encendido del sistema.  <br /></td></tr>
+<tr class="separator:a441a780838659ea9ce51e6b04c94146c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e5e922c4097dad08b50e04f23d7416f" id="r_a7e5e922c4097dad08b50e04f23d7416f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e5e922c4097dad08b50e04f23d7416f">SensorDeRiego</a> ()</td></tr>
+<tr class="memdesc:a7e5e922c4097dad08b50e04f23d7416f"><td class="mdescLeft">&#160;</td><td class="mdescRight">mide la humedad y la guarda en la variable medicionHumedad  <br /></td></tr>
+<tr class="separator:a7e5e922c4097dad08b50e04f23d7416f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c89bec3e41b2e2601b729393c955e42" id="r_a3c89bec3e41b2e2601b729393c955e42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c89bec3e41b2e2601b729393c955e42">SensorTension</a> ()</td></tr>
+<tr class="memdesc:a3c89bec3e41b2e2601b729393c955e42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mide el ph que se sensa en voltios y lo guarda en medicionTension.  <br /></td></tr>
+<tr class="separator:a3c89bec3e41b2e2601b729393c955e42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65fc762aa35faf3133c57620fdc12c65" id="r_a65fc762aa35faf3133c57620fdc12c65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65fc762aa35faf3133c57620fdc12c65">controlBombaRiego</a> ()</td></tr>
+<tr class="memdesc:a65fc762aa35faf3133c57620fdc12c65"><td class="mdescLeft">&#160;</td><td class="mdescRight">controla el estado de la bomba de riego, permite activar y desactivar y avisa cuando esta activa  <br /></td></tr>
+<tr class="separator:a65fc762aa35faf3133c57620fdc12c65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebac455c20f742653e8b8531f5de5ed3" id="r_aebac455c20f742653e8b8531f5de5ed3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebac455c20f742653e8b8531f5de5ed3">controlPhA</a> ()</td></tr>
+<tr class="memdesc:aebac455c20f742653e8b8531f5de5ed3"><td class="mdescLeft">&#160;</td><td class="mdescRight">controla el estado de la bomba de PH acido, permite activar/desactivar y avisa cuando esta activa  <br /></td></tr>
+<tr class="separator:aebac455c20f742653e8b8531f5de5ed3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6123b9e1447ffff7e28bf8ae780504e5" id="r_a6123b9e1447ffff7e28bf8ae780504e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6123b9e1447ffff7e28bf8ae780504e5">controlPhB</a> ()</td></tr>
+<tr class="memdesc:a6123b9e1447ffff7e28bf8ae780504e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">controla el estado de la bomba de PH basico, permite activar/desactivar y avisa cuando esta activa  <br /></td></tr>
+<tr class="separator:a6123b9e1447ffff7e28bf8ae780504e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a234c92e64ab6228c8b14dcfbf6e711e0" id="r_a234c92e64ab6228c8b14dcfbf6e711e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a234c92e64ab6228c8b14dcfbf6e711e0">MedidorHumedad</a> ()</td></tr>
+<tr class="memdesc:a234c92e64ab6228c8b14dcfbf6e711e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">controla el estado de la humedad, si es baja activa bomba de riego, si es alta lo desactiva  <br /></td></tr>
+<tr class="separator:a234c92e64ab6228c8b14dcfbf6e711e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a67665730216f5105087c980c89d35b" id="r_a0a67665730216f5105087c980c89d35b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a67665730216f5105087c980c89d35b">medidorPH</a> ()</td></tr>
+<tr class="memdesc:a0a67665730216f5105087c980c89d35b"><td class="mdescLeft">&#160;</td><td class="mdescRight">controla el PH, si es menor a 6 activa bomba B y desactiva A , si es mayor a 6.7 activa bomba A y desactiva B, si el ph es correcto desactiva bomba A y B  <br /></td></tr>
+<tr class="separator:a0a67665730216f5105087c980c89d35b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab39b1a5545ad12d106b865e1b6d05bfc" id="r_ab39b1a5545ad12d106b865e1b6d05bfc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab39b1a5545ad12d106b865e1b6d05bfc">informarEstadoSistema</a> ()</td></tr>
+<tr class="memdesc:ab39b1a5545ad12d106b865e1b6d05bfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">informa por mensaje de la UART el estado de la humedad y el ph  <br /></td></tr>
+<tr class="separator:ab39b1a5545ad12d106b865e1b6d05bfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44a2fa16c6c53b66c6d9f8162818791d" id="r_a44a2fa16c6c53b66c6d9f8162818791d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44a2fa16c6c53b66c6d9f8162818791d">SistemaDeMediciones</a> ()</td></tr>
+<tr class="memdesc:a44a2fa16c6c53b66c6d9f8162818791d"><td class="mdescLeft">&#160;</td><td class="mdescRight">controla las mediciones de la humedad y el ph  <br /></td></tr>
+<tr class="separator:a44a2fa16c6c53b66c6d9f8162818791d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bc33030fc2eca13254193b8176a7ad9" id="r_a7bc33030fc2eca13254193b8176a7ad9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7bc33030fc2eca13254193b8176a7ad9">activarSistema</a> ()</td></tr>
+<tr class="memdesc:a7bc33030fc2eca13254193b8176a7ad9"><td class="mdescLeft">&#160;</td><td class="mdescRight">modifica la variable tecla a valor de encendido  <br /></td></tr>
+<tr class="separator:a7bc33030fc2eca13254193b8176a7ad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79d158c8910108d645f4b3f4e1d50d34" id="r_a79d158c8910108d645f4b3f4e1d50d34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79d158c8910108d645f4b3f4e1d50d34">desactivarSistema</a> ()</td></tr>
+<tr class="memdesc:a79d158c8910108d645f4b3f4e1d50d34"><td class="mdescLeft">&#160;</td><td class="mdescRight">modifica la variable tecla a valor de apagado  <br /></td></tr>
+<tr class="separator:a79d158c8910108d645f4b3f4e1d50d34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcfa6656662be613b1d7cbc8eb58ae7c" id="r_adcfa6656662be613b1d7cbc8eb58ae7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adcfa6656662be613b1d7cbc8eb58ae7c">Sistema</a> ()</td></tr>
+<tr class="memdesc:adcfa6656662be613b1d7cbc8eb58ae7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controla el sistema completo, permite prender o apagar el sistema. Al encender resetea los timers. Al apagar detiene las bombas y detiene los timers.  <br /></td></tr>
+<tr class="separator:adcfa6656662be613b1d7cbc8eb58ae7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a630544a7f0a2cc40d8a7fefab7e2fe70" id="r_a630544a7f0a2cc40d8a7fefab7e2fe70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a630544a7f0a2cc40d8a7fefab7e2fe70">app_main</a> (void)</td></tr>
+<tr class="separator:a630544a7f0a2cc40d8a7fefab7e2fe70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a194b33ff09e2af8e76b05237871d96ad" id="r_a194b33ff09e2af8e76b05237871d96ad"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a194b33ff09e2af8e76b05237871d96ad">medicionPH</a></td></tr>
+<tr class="memdesc:a194b33ff09e2af8e76b05237871d96ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variables donde se guardan las mediciones.  <br /></td></tr>
+<tr class="separator:a194b33ff09e2af8e76b05237871d96ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1992b6d21ff94ffe20018724920c74a5" id="r_a1992b6d21ff94ffe20018724920c74a5"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1992b6d21ff94ffe20018724920c74a5">medicionHumedad</a></td></tr>
+<tr class="separator:a1992b6d21ff94ffe20018724920c74a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a815a9305e9d78a91240210f302ebdd96" id="r_a815a9305e9d78a91240210f302ebdd96"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a815a9305e9d78a91240210f302ebdd96">medicionTension</a></td></tr>
+<tr class="separator:a815a9305e9d78a91240210f302ebdd96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae81847910f2120ae21b6a45e9fc866c4" id="r_ae81847910f2120ae21b6a45e9fc866c4"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae81847910f2120ae21b6a45e9fc866c4">teclaSistema</a></td></tr>
+<tr class="separator:ae81847910f2120ae21b6a45e9fc866c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c781f7c2e9dcba4f065e4ef60da7fde" id="r_a8c781f7c2e9dcba4f065e4ef60da7fde"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c781f7c2e9dcba4f065e4ef60da7fde">cteConversionVoltaPH</a> = 3 / 14</td></tr>
+<tr class="memdesc:a8c781f7c2e9dcba4f065e4ef60da7fde"><td class="mdescLeft">&#160;</td><td class="mdescRight">constante de converion de tension a PH  <br /></td></tr>
+<tr class="separator:a8c781f7c2e9dcba4f065e4ef60da7fde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28582a5585ef42b899878a95860f31df" id="r_a28582a5585ef42b899878a95860f31df"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28582a5585ef42b899878a95860f31df">estadoBombaRiego</a> = false</td></tr>
+<tr class="memdesc:a28582a5585ef42b899878a95860f31df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variables booleanas donde se almacena si una bomba esta encendida o apagada.  <br /></td></tr>
+<tr class="separator:a28582a5585ef42b899878a95860f31df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7cc32f3577cd3a8a33af3679090b220" id="r_ae7cc32f3577cd3a8a33af3679090b220"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7cc32f3577cd3a8a33af3679090b220">estadoBombaPhA</a> = false</td></tr>
+<tr class="separator:ae7cc32f3577cd3a8a33af3679090b220"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11261c2708b84e77c74d9be5ebe474ae" id="r_a11261c2708b84e77c74d9be5ebe474ae"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11261c2708b84e77c74d9be5ebe474ae">estadobombaPhB</a> = false</td></tr>
+<tr class="separator:a11261c2708b84e77c74d9be5ebe474ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37cdc2fef93a1c283850846484f18b28" id="r_a37cdc2fef93a1c283850846484f18b28"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37cdc2fef93a1c283850846484f18b28">estadoHumedad</a> = true</td></tr>
+<tr class="separator:a37cdc2fef93a1c283850846484f18b28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a367481b5beff07dd3d679d1a268f7919" id="r_a367481b5beff07dd3d679d1a268f7919"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a367481b5beff07dd3d679d1a268f7919">estadoSistema</a> = true</td></tr>
+<tr class="separator:a367481b5beff07dd3d679d1a268f7919"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f31c17eb7db66b3f19db620ff3cc912" id="r_a2f31c17eb7db66b3f19db620ff3cc912"><td class="memItemLeft" align="right" valign="top">TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f31c17eb7db66b3f19db620ff3cc912">Sistema_de_mediciones_task_handle</a> = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+<tr class="memdesc:a2f31c17eb7db66b3f19db620ff3cc912"><td class="mdescLeft">&#160;</td><td class="mdescRight">Task Handlers.  <br /></td></tr>
+<tr class="separator:a2f31c17eb7db66b3f19db620ff3cc912"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1888832bcc2cad4a94ff791a459d101c" id="r_a1888832bcc2cad4a94ff791a459d101c"><td class="memItemLeft" align="right" valign="top">TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1888832bcc2cad4a94ff791a459d101c">Informar_estado_sistema_task_handle</a> = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+<tr class="separator:a1888832bcc2cad4a94ff791a459d101c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8cebe48a360c6b36116e4418691b81d" id="r_ae8cebe48a360c6b36116e4418691b81d"><td class="memItemLeft" align="right" valign="top">TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8cebe48a360c6b36116e4418691b81d">Controlar_Sistema_task_handle</a> = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+<tr class="separator:ae8cebe48a360c6b36116e4418691b81d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentación de funciones</h2>
+<a id="a7bc33030fc2eca13254193b8176a7ad9" name="a7bc33030fc2eca13254193b8176a7ad9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bc33030fc2eca13254193b8176a7ad9">&#9670;&#160;</a></span>activarSistema()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void activarSistema </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>modifica la variable tecla a valor de encendido </p>
+<dl class="section return"><dt>Devuelve</dt><dd></dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_examen_8c_source.html#l00316">316</a> del archivo <a class="el" href="_examen_8c_source.html">Examen.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_examen_8c_source.html#l00039">teclaSistema</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen_8c_source.html#l00382">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a630544a7f0a2cc40d8a7fefab7e2fe70" name="a630544a7f0a2cc40d8a7fefab7e2fe70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a630544a7f0a2cc40d8a7fefab7e2fe70">&#9670;&#160;</a></span>app_main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void app_main </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_examen_8c_source.html#l00382">382</a> del archivo <a class="el" href="_examen_8c_source.html">Examen.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_examen_8c_source.html#l00316">activarSistema()</a>, <a class="el" href="analog__io__mcu_8h_source.html#l00038">ADC_SINGLE</a>, <a class="el" href="analog__io__mcu_8c_source.html#l00045">AnalogInputInit()</a>, <a class="el" href="analog__io__mcu_8c_source.html#l00095">AnalogOutputInit()</a>, <a class="el" href="analog__io__mcu_8h_source.html#l00032">CH1</a>, <a class="el" href="_examen_8c_source.html#l00060">Controlar_Sistema_task_handle</a>, <a class="el" href="_examen_8c_source.html#l00327">desactivarSistema()</a>, <a class="el" href="_examen_8c_source.html#l00095">FuncTimerControlarSistema()</a>, <a class="el" href="_examen_8c_source.html#l00084">FuncTimerInformarEstadoSistema()</a>, <a class="el" href="_examen_8c_source.html#l00073">FuncTimerSistemaDeMediciones()</a>, <a class="el" href="gpio__mcu_8h_source.html#l00062">GPIO_10</a>, <a class="el" href="gpio__mcu_8h_source.html#l00063">GPIO_11</a>, <a class="el" href="gpio__mcu_8h_source.html#l00061">GPIO_9</a>, <a class="el" href="gpio__mcu_8h_source.html#l00044">GPIO_OUTPUT</a>, <a class="el" href="gpio__mcu_8c_source.html#l00067">GPIOInit()</a>, <a class="el" href="_examen_8c_source.html#l00059">Informar_estado_sistema_task_handle</a>, <a class="el" href="_examen_8c_source.html#l00271">informarEstadoSistema()</a>, <a class="el" href="analog__io__mcu_8h_source.html#l00049">analog_input_config_t::input</a>, <a class="el" href="ili9341_8c_source.html#l00042">NULL</a>, <a class="el" href="uart__mcu_8h_source.html#l00039">serial_config_t::port</a>, <a class="el" href="_examen_8c_source.html#l00338">Sistema()</a>, <a class="el" href="_examen_8c_source.html#l00058">Sistema_de_mediciones_task_handle</a>, <a class="el" href="_examen_8c_source.html#l00300">SistemaDeMediciones()</a>, <a class="el" href="switch_8h_source.html#l00032">SWITCH_1</a>, <a class="el" href="switch_8h_source.html#l00033">SWITCH_2</a>, <a class="el" href="switch_8c_source.html#l00047">SwitchActivInt()</a>, <a class="el" href="switch_8c_source.html#l00029">SwitchesInit()</a>, <a class="el" href="timer__mcu_8h_source.html#l00040">timer_config_t::timer</a>, <a class="el" href="timer__mcu_8h_source.html#l00032">TIMER_A</a>, <a class="el" href="timer__mcu_8h_source.html#l00033">TIMER_B</a>, <a class="el" href="timer__mcu_8h_source.html#l00034">TIMER_C</a>, <a class="el" href="timer__mcu_8c_source.html#l00055">TimerInit()</a>, <a class="el" href="timer__mcu_8c_source.html#l00110">TimerStart()</a>, <a class="el" href="uart__mcu_8h_source.html#l00032">UART_PC</a> y <a class="el" href="uart__mcu_8c_source.html#l00107">UartInit()</a>.</p>
+
+</div>
+</div>
+<a id="a65fc762aa35faf3133c57620fdc12c65" name="a65fc762aa35faf3133c57620fdc12c65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65fc762aa35faf3133c57620fdc12c65">&#9670;&#160;</a></span>controlBombaRiego()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void controlBombaRiego </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>controla el estado de la bomba de riego, permite activar y desactivar y avisa cuando esta activa </p>
+<dl class="section return"><dt>Devuelve</dt><dd></dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_examen_8c_source.html#l00136">136</a> del archivo <a class="el" href="_examen_8c_source.html">Examen.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_examen_8c_source.html#l00049">estadoBombaRiego</a>, <a class="el" href="gpio__mcu_8h_source.html#l00061">GPIO_9</a>, <a class="el" href="gpio__mcu_8c_source.html#l00086">GPIOOff()</a>, <a class="el" href="gpio__mcu_8c_source.html#l00081">GPIOOn()</a>, <a class="el" href="uart__mcu_8h_source.html#l00032">UART_PC</a> y <a class="el" href="uart__mcu_8c_source.html#l00193">UartSendString()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen_8c_source.html#l00196">MedidorHumedad()</a> y <a class="el" href="_examen_8c_source.html#l00338">Sistema()</a>.</p>
+
+</div>
+</div>
+<a id="aebac455c20f742653e8b8531f5de5ed3" name="aebac455c20f742653e8b8531f5de5ed3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebac455c20f742653e8b8531f5de5ed3">&#9670;&#160;</a></span>controlPhA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void controlPhA </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>controla el estado de la bomba de PH acido, permite activar/desactivar y avisa cuando esta activa </p>
+<dl class="section return"><dt>Devuelve</dt><dd></dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_examen_8c_source.html#l00156">156</a> del archivo <a class="el" href="_examen_8c_source.html">Examen.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_examen_8c_source.html#l00050">estadoBombaPhA</a>, <a class="el" href="gpio__mcu_8h_source.html#l00062">GPIO_10</a>, <a class="el" href="gpio__mcu_8c_source.html#l00086">GPIOOff()</a>, <a class="el" href="gpio__mcu_8c_source.html#l00081">GPIOOn()</a>, <a class="el" href="uart__mcu_8h_source.html#l00032">UART_PC</a> y <a class="el" href="uart__mcu_8c_source.html#l00193">UartSendString()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen_8c_source.html#l00224">medidorPH()</a> y <a class="el" href="_examen_8c_source.html#l00338">Sistema()</a>.</p>
+
+</div>
+</div>
+<a id="a6123b9e1447ffff7e28bf8ae780504e5" name="a6123b9e1447ffff7e28bf8ae780504e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6123b9e1447ffff7e28bf8ae780504e5">&#9670;&#160;</a></span>controlPhB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void controlPhB </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>controla el estado de la bomba de PH basico, permite activar/desactivar y avisa cuando esta activa </p>
+<dl class="section return"><dt>Devuelve</dt><dd></dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_examen_8c_source.html#l00176">176</a> del archivo <a class="el" href="_examen_8c_source.html">Examen.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_examen_8c_source.html#l00051">estadobombaPhB</a>, <a class="el" href="gpio__mcu_8h_source.html#l00063">GPIO_11</a>, <a class="el" href="gpio__mcu_8c_source.html#l00086">GPIOOff()</a>, <a class="el" href="gpio__mcu_8c_source.html#l00081">GPIOOn()</a>, <a class="el" href="uart__mcu_8h_source.html#l00032">UART_PC</a> y <a class="el" href="uart__mcu_8c_source.html#l00193">UartSendString()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen_8c_source.html#l00224">medidorPH()</a> y <a class="el" href="_examen_8c_source.html#l00338">Sistema()</a>.</p>
+
+</div>
+</div>
+<a id="a79d158c8910108d645f4b3f4e1d50d34" name="a79d158c8910108d645f4b3f4e1d50d34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79d158c8910108d645f4b3f4e1d50d34">&#9670;&#160;</a></span>desactivarSistema()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void desactivarSistema </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>modifica la variable tecla a valor de apagado </p>
+<dl class="section return"><dt>Devuelve</dt><dd></dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_examen_8c_source.html#l00327">327</a> del archivo <a class="el" href="_examen_8c_source.html">Examen.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_examen_8c_source.html#l00039">teclaSistema</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen_8c_source.html#l00382">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a441a780838659ea9ce51e6b04c94146c" name="a441a780838659ea9ce51e6b04c94146c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a441a780838659ea9ce51e6b04c94146c">&#9670;&#160;</a></span>FuncTimerControlarSistema()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FuncTimerControlarSistema </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>param</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion del timer C que controla el apagado o encendido del sistema. </p>
+<dl class="section return"><dt>Devuelve</dt><dd></dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_examen_8c_source.html#l00095">95</a> del archivo <a class="el" href="_examen_8c_source.html">Examen.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_examen_8c_source.html#l00060">Controlar_Sistema_task_handle</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen_8c_source.html#l00382">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="af08c90a69c757a3f4ed3530e2f5e28e0" name="af08c90a69c757a3f4ed3530e2f5e28e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af08c90a69c757a3f4ed3530e2f5e28e0">&#9670;&#160;</a></span>FuncTimerInformarEstadoSistema()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FuncTimerInformarEstadoSistema </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>param</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion del timer B que controla mostrar la informacion del sistema. </p>
+<dl class="section return"><dt>Devuelve</dt><dd></dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_examen_8c_source.html#l00084">84</a> del archivo <a class="el" href="_examen_8c_source.html">Examen.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_examen_8c_source.html#l00059">Informar_estado_sistema_task_handle</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen_8c_source.html#l00382">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="ad88aabd82073b37e3bde2727102369ba" name="ad88aabd82073b37e3bde2727102369ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad88aabd82073b37e3bde2727102369ba">&#9670;&#160;</a></span>FuncTimerSistemaDeMediciones()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FuncTimerSistemaDeMediciones </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>param</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funcion del timer A que controla sistema de mediciones. </p>
+<dl class="section return"><dt>Devuelve</dt><dd></dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_examen_8c_source.html#l00073">73</a> del archivo <a class="el" href="_examen_8c_source.html">Examen.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_examen_8c_source.html#l00058">Sistema_de_mediciones_task_handle</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen_8c_source.html#l00382">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="ab39b1a5545ad12d106b865e1b6d05bfc" name="ab39b1a5545ad12d106b865e1b6d05bfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab39b1a5545ad12d106b865e1b6d05bfc">&#9670;&#160;</a></span>informarEstadoSistema()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void informarEstadoSistema </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>informa por mensaje de la UART el estado de la humedad y el ph </p>
+<dl class="section return"><dt>Devuelve</dt><dd></dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_examen_8c_source.html#l00271">271</a> del archivo <a class="el" href="_examen_8c_source.html">Examen.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_examen_8c_source.html#l00052">estadoHumedad</a>, <a class="el" href="_examen_8c_source.html#l00036">medicionPH</a>, <a class="el" href="uart__mcu_8h_source.html#l00032">UART_PC</a>, <a class="el" href="uart__mcu_8c_source.html#l00222">UartItoa()</a> y <a class="el" href="uart__mcu_8c_source.html#l00193">UartSendString()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen_8c_source.html#l00382">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a234c92e64ab6228c8b14dcfbf6e711e0" name="a234c92e64ab6228c8b14dcfbf6e711e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a234c92e64ab6228c8b14dcfbf6e711e0">&#9670;&#160;</a></span>MedidorHumedad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MedidorHumedad </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>controla el estado de la humedad, si es baja activa bomba de riego, si es alta lo desactiva </p>
+<dl class="section return"><dt>Devuelve</dt><dd></dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_examen_8c_source.html#l00196">196</a> del archivo <a class="el" href="_examen_8c_source.html">Examen.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_examen_8c_source.html#l00136">controlBombaRiego()</a>, <a class="el" href="_examen_8c_source.html#l00049">estadoBombaRiego</a>, <a class="el" href="_examen_8c_source.html#l00052">estadoHumedad</a>, <a class="el" href="_examen_8c_source.html#l00037">medicionHumedad</a> y <a class="el" href="_examen_8c_source.html#l00114">SensorDeRiego()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen_8c_source.html#l00300">SistemaDeMediciones()</a>.</p>
+
+</div>
+</div>
+<a id="a0a67665730216f5105087c980c89d35b" name="a0a67665730216f5105087c980c89d35b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a67665730216f5105087c980c89d35b">&#9670;&#160;</a></span>medidorPH()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void medidorPH </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>controla el PH, si es menor a 6 activa bomba B y desactiva A , si es mayor a 6.7 activa bomba A y desactiva B, si el ph es correcto desactiva bomba A y B </p>
+<dl class="section return"><dt>Devuelve</dt><dd></dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_examen_8c_source.html#l00224">224</a> del archivo <a class="el" href="_examen_8c_source.html">Examen.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_examen_8c_source.html#l00156">controlPhA()</a>, <a class="el" href="_examen_8c_source.html#l00176">controlPhB()</a>, <a class="el" href="_examen_8c_source.html#l00044">cteConversionVoltaPH</a>, <a class="el" href="_examen_8c_source.html#l00050">estadoBombaPhA</a>, <a class="el" href="_examen_8c_source.html#l00051">estadobombaPhB</a>, <a class="el" href="_examen_8c_source.html#l00036">medicionPH</a>, <a class="el" href="_examen_8c_source.html#l00038">medicionTension</a> y <a class="el" href="_examen_8c_source.html#l00125">SensorTension()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen_8c_source.html#l00300">SistemaDeMediciones()</a>.</p>
+
+</div>
+</div>
+<a id="a7e5e922c4097dad08b50e04f23d7416f" name="a7e5e922c4097dad08b50e04f23d7416f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e5e922c4097dad08b50e04f23d7416f">&#9670;&#160;</a></span>SensorDeRiego()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SensorDeRiego </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>mide la humedad y la guarda en la variable medicionHumedad </p>
+<dl class="section return"><dt>Devuelve</dt><dd></dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_examen_8c_source.html#l00114">114</a> del archivo <a class="el" href="_examen_8c_source.html">Examen.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="analog__io__mcu_8c_source.html#l00105">AnalogInputReadSingle()</a>, <a class="el" href="analog__io__mcu_8h_source.html#l00032">CH1</a> y <a class="el" href="_examen_8c_source.html#l00037">medicionHumedad</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen_8c_source.html#l00196">MedidorHumedad()</a>.</p>
+
+</div>
+</div>
+<a id="a3c89bec3e41b2e2601b729393c955e42" name="a3c89bec3e41b2e2601b729393c955e42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c89bec3e41b2e2601b729393c955e42">&#9670;&#160;</a></span>SensorTension()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SensorTension </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mide el ph que se sensa en voltios y lo guarda en medicionTension. </p>
+<dl class="section return"><dt>Devuelve</dt><dd></dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_examen_8c_source.html#l00125">125</a> del archivo <a class="el" href="_examen_8c_source.html">Examen.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="analog__io__mcu_8c_source.html#l00105">AnalogInputReadSingle()</a>, <a class="el" href="analog__io__mcu_8h_source.html#l00033">CH2</a> y <a class="el" href="_examen_8c_source.html#l00038">medicionTension</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen_8c_source.html#l00224">medidorPH()</a>.</p>
+
+</div>
+</div>
+<a id="adcfa6656662be613b1d7cbc8eb58ae7c" name="adcfa6656662be613b1d7cbc8eb58ae7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcfa6656662be613b1d7cbc8eb58ae7c">&#9670;&#160;</a></span>Sistema()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sistema </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Controla el sistema completo, permite prender o apagar el sistema. Al encender resetea los timers. Al apagar detiene las bombas y detiene los timers. </p>
+<dl class="section return"><dt>Devuelve</dt><dd></dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_examen_8c_source.html#l00338">338</a> del archivo <a class="el" href="_examen_8c_source.html">Examen.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_examen_8c_source.html#l00136">controlBombaRiego()</a>, <a class="el" href="_examen_8c_source.html#l00156">controlPhA()</a>, <a class="el" href="_examen_8c_source.html#l00176">controlPhB()</a>, <a class="el" href="_examen_8c_source.html#l00050">estadoBombaPhA</a>, <a class="el" href="_examen_8c_source.html#l00051">estadobombaPhB</a>, <a class="el" href="_examen_8c_source.html#l00049">estadoBombaRiego</a>, <a class="el" href="_examen_8c_source.html#l00053">estadoSistema</a>, <a class="el" href="_examen_8c_source.html#l00039">teclaSistema</a>, <a class="el" href="timer__mcu_8h_source.html#l00032">TIMER_A</a>, <a class="el" href="timer__mcu_8h_source.html#l00033">TIMER_B</a>, <a class="el" href="timer__mcu_8c_source.html#l00138">TimerReset()</a>, <a class="el" href="timer__mcu_8c_source.html#l00124">TimerStop()</a>, <a class="el" href="uart__mcu_8h_source.html#l00032">UART_PC</a> y <a class="el" href="uart__mcu_8c_source.html#l00142">UartReadByte()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen_8c_source.html#l00382">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a44a2fa16c6c53b66c6d9f8162818791d" name="a44a2fa16c6c53b66c6d9f8162818791d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44a2fa16c6c53b66c6d9f8162818791d">&#9670;&#160;</a></span>SistemaDeMediciones()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SistemaDeMediciones </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>controla las mediciones de la humedad y el ph </p>
+<dl class="section return"><dt>Devuelve</dt><dd></dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_examen_8c_source.html#l00300">300</a> del archivo <a class="el" href="_examen_8c_source.html">Examen.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_examen_8c_source.html#l00196">MedidorHumedad()</a> y <a class="el" href="_examen_8c_source.html#l00224">medidorPH()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen_8c_source.html#l00382">app_main()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de variables</h2>
+<a id="ae8cebe48a360c6b36116e4418691b81d" name="ae8cebe48a360c6b36116e4418691b81d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8cebe48a360c6b36116e4418691b81d">&#9670;&#160;</a></span>Controlar_Sistema_task_handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TaskHandle_t Controlar_Sistema_task_handle = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_examen_8c_source.html#l00060">60</a> del archivo <a class="el" href="_examen_8c_source.html">Examen.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen_8c_source.html#l00382">app_main()</a> y <a class="el" href="_examen_8c_source.html#l00095">FuncTimerControlarSistema()</a>.</p>
+
+</div>
+</div>
+<a id="a8c781f7c2e9dcba4f065e4ef60da7fde" name="a8c781f7c2e9dcba4f065e4ef60da7fde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c781f7c2e9dcba4f065e4ef60da7fde">&#9670;&#160;</a></span>cteConversionVoltaPH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float cteConversionVoltaPH = 3 / 14</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>constante de converion de tension a PH </p>
+<p>constante para convertir de tension a PH </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_examen_8c_source.html#l00044">44</a> del archivo <a class="el" href="_examen_8c_source.html">Examen.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen_8c_source.html#l00224">medidorPH()</a>.</p>
+
+</div>
+</div>
+<a id="ae7cc32f3577cd3a8a33af3679090b220" name="ae7cc32f3577cd3a8a33af3679090b220"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7cc32f3577cd3a8a33af3679090b220">&#9670;&#160;</a></span>estadoBombaPhA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool estadoBombaPhA = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_examen_8c_source.html#l00050">50</a> del archivo <a class="el" href="_examen_8c_source.html">Examen.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen_8c_source.html#l00156">controlPhA()</a>, <a class="el" href="_examen_8c_source.html#l00224">medidorPH()</a> y <a class="el" href="_examen_8c_source.html#l00338">Sistema()</a>.</p>
+
+</div>
+</div>
+<a id="a11261c2708b84e77c74d9be5ebe474ae" name="a11261c2708b84e77c74d9be5ebe474ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11261c2708b84e77c74d9be5ebe474ae">&#9670;&#160;</a></span>estadobombaPhB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool estadobombaPhB = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_examen_8c_source.html#l00051">51</a> del archivo <a class="el" href="_examen_8c_source.html">Examen.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen_8c_source.html#l00176">controlPhB()</a>, <a class="el" href="_examen_8c_source.html#l00224">medidorPH()</a> y <a class="el" href="_examen_8c_source.html#l00338">Sistema()</a>.</p>
+
+</div>
+</div>
+<a id="a28582a5585ef42b899878a95860f31df" name="a28582a5585ef42b899878a95860f31df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28582a5585ef42b899878a95860f31df">&#9670;&#160;</a></span>estadoBombaRiego</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool estadoBombaRiego = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Variables booleanas donde se almacena si una bomba esta encendida o apagada. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_examen_8c_source.html#l00049">49</a> del archivo <a class="el" href="_examen_8c_source.html">Examen.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen_8c_source.html#l00136">controlBombaRiego()</a>, <a class="el" href="_examen_8c_source.html#l00196">MedidorHumedad()</a> y <a class="el" href="_examen_8c_source.html#l00338">Sistema()</a>.</p>
+
+</div>
+</div>
+<a id="a37cdc2fef93a1c283850846484f18b28" name="a37cdc2fef93a1c283850846484f18b28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37cdc2fef93a1c283850846484f18b28">&#9670;&#160;</a></span>estadoHumedad</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool estadoHumedad = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_examen_8c_source.html#l00052">52</a> del archivo <a class="el" href="_examen_8c_source.html">Examen.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen_8c_source.html#l00271">informarEstadoSistema()</a> y <a class="el" href="_examen_8c_source.html#l00196">MedidorHumedad()</a>.</p>
+
+</div>
+</div>
+<a id="a367481b5beff07dd3d679d1a268f7919" name="a367481b5beff07dd3d679d1a268f7919"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a367481b5beff07dd3d679d1a268f7919">&#9670;&#160;</a></span>estadoSistema</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool estadoSistema = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_examen_8c_source.html#l00053">53</a> del archivo <a class="el" href="_examen_8c_source.html">Examen.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen_8c_source.html#l00338">Sistema()</a>.</p>
+
+</div>
+</div>
+<a id="a1888832bcc2cad4a94ff791a459d101c" name="a1888832bcc2cad4a94ff791a459d101c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1888832bcc2cad4a94ff791a459d101c">&#9670;&#160;</a></span>Informar_estado_sistema_task_handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TaskHandle_t Informar_estado_sistema_task_handle = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_examen_8c_source.html#l00059">59</a> del archivo <a class="el" href="_examen_8c_source.html">Examen.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen_8c_source.html#l00382">app_main()</a> y <a class="el" href="_examen_8c_source.html#l00084">FuncTimerInformarEstadoSistema()</a>.</p>
+
+</div>
+</div>
+<a id="a1992b6d21ff94ffe20018724920c74a5" name="a1992b6d21ff94ffe20018724920c74a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1992b6d21ff94ffe20018724920c74a5">&#9670;&#160;</a></span>medicionHumedad</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int16_t medicionHumedad</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Medicion de la humedad </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_examen_8c_source.html#l00037">37</a> del archivo <a class="el" href="_examen_8c_source.html">Examen.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen_8c_source.html#l00196">MedidorHumedad()</a> y <a class="el" href="_examen_8c_source.html#l00114">SensorDeRiego()</a>.</p>
+
+</div>
+</div>
+<a id="a194b33ff09e2af8e76b05237871d96ad" name="a194b33ff09e2af8e76b05237871d96ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a194b33ff09e2af8e76b05237871d96ad">&#9670;&#160;</a></span>medicionPH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int16_t medicionPH</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Variables donde se guardan las mediciones. </p>
+<p>Medicion de PH </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_examen_8c_source.html#l00036">36</a> del archivo <a class="el" href="_examen_8c_source.html">Examen.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen_8c_source.html#l00271">informarEstadoSistema()</a> y <a class="el" href="_examen_8c_source.html#l00224">medidorPH()</a>.</p>
+
+</div>
+</div>
+<a id="a815a9305e9d78a91240210f302ebdd96" name="a815a9305e9d78a91240210f302ebdd96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a815a9305e9d78a91240210f302ebdd96">&#9670;&#160;</a></span>medicionTension</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float medicionTension</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Medicion de la tension </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_examen_8c_source.html#l00038">38</a> del archivo <a class="el" href="_examen_8c_source.html">Examen.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen_8c_source.html#l00224">medidorPH()</a> y <a class="el" href="_examen_8c_source.html#l00125">SensorTension()</a>.</p>
+
+</div>
+</div>
+<a id="a2f31c17eb7db66b3f19db620ff3cc912" name="a2f31c17eb7db66b3f19db620ff3cc912"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f31c17eb7db66b3f19db620ff3cc912">&#9670;&#160;</a></span>Sistema_de_mediciones_task_handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TaskHandle_t Sistema_de_mediciones_task_handle = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Task Handlers. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_examen_8c_source.html#l00058">58</a> del archivo <a class="el" href="_examen_8c_source.html">Examen.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen_8c_source.html#l00382">app_main()</a> y <a class="el" href="_examen_8c_source.html#l00073">FuncTimerSistemaDeMediciones()</a>.</p>
+
+</div>
+</div>
+<a id="ae81847910f2120ae21b6a45e9fc866c4" name="ae81847910f2120ae21b6a45e9fc866c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae81847910f2120ae21b6a45e9fc866c4">&#9670;&#160;</a></span>teclaSistema</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t teclaSistema</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Se almacena la tecla que se oprimio </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_examen_8c_source.html#l00039">39</a> del archivo <a class="el" href="_examen_8c_source.html">Examen.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_examen_8c_source.html#l00316">activarSistema()</a>, <a class="el" href="_examen_8c_source.html#l00327">desactivarSistema()</a> y <a class="el" href="_examen_8c_source.html#l00338">Sistema()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_ab63d5a53c3c8fed5134bd78a3022a7d.html">Regosky-1C-2024</a></li><li class="navelem"><a class="el" href="dir_fceefab9dc94842543ea2930b8407b3c.html">firmware</a></li><li class="navelem"><a class="el" href="dir_93ac6964fd6bfb0545c0816ab83cd594.html">projects</a></li><li class="navelem"><a class="el" href="dir_d0d9d0f0afdc5be6e3db7b9afa66f93d.html">Examen</a></li><li class="navelem"><a class="el" href="dir_c134e6305575bfebc49e4b0599637f17.html">main</a></li><li class="navelem"><a class="el" href="_examen_8c.html">Examen.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+  </ul>
+</div>
+</body>
+</html>

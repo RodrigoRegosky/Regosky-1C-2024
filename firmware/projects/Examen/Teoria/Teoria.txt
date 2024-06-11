@@ -1,0 +1,21 @@
+Pregunta 1
+
+El protocolo de comunicacion que esta empleando es el inter-integrated circuit o IIC o I**2C
+
+protocolo síncrono basado en dos líneas: Serial Clock y Serial Data. 
+Las lineas de datos son bidireccionales.
+Solo permite modo Half-Duplex.
+Permite interconectar varios dispositivos a un mismo par de cables.
+
+Componenetes: Transmisor, receptor, master, esclavo, multimaster, arbitraje y sincronizacion
+Transmisor: Dispositivo que envía datos al bus.
+Receptor: Dispositivo que recibe datos del bus.
+Master: Dispositivo que inicia la transferencia, genera la señal de clock y finaliza la transferencia.
+Esclavo: Dispositivo direccionable por el master.
+Arbitraje: Procedimiento para garantizar que, si más de un maestro intenta simultáneamente controlar el bús, solo uno puede hacerlo y el ganador logra enviar mensajes sí que sean corrompidos.
+Sincronización: Procedimiento para sincronizar señales de clock de dos o más dispositivos.
+
+Pregunta 2 
+
+El conversor es Analogico a Digital de tipo - Conversión indirecta - aproximaciones sucesivas formado por un DAC, Registro de Aproximaciones Sucesivas -SAR- y un comparador.
+Sin el capacitor para filtrar la señal de alterna no puede sensarse correctamente con el comparador
