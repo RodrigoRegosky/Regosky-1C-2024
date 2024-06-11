@@ -53,11 +53,15 @@
             "path": "projects/pro2_act4"
         },
         {
-            "name": "drivers",
             "path": "drivers"
         },
         {
-            "name": "proyecto_integrador",
+            "path": "projects/ej_bluetooth_ledrgb"
+        },
+        {
+            "path": "middelware"
+        },
+        {
             "path": "projects/proyecto_integrador"
         }
     ],
