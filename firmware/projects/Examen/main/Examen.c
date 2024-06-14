@@ -97,13 +97,6 @@ void FuncTimerControlarSistema(void *param)
 	vTaskNotifyGiveFromISR(Controlar_Sistema_task_handle, pdFALSE);
 }
 
-/*!
- *
- * @fn
- * @brief
- * @param data
- * @return
- */
 
 /*!
  *

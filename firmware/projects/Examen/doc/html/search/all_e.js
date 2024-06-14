@@ -17,8 +17,8 @@ var searchData=
   ['pin_5fnum_5fmiso_14',['PIN_NUM_MISO',['../spi__mcu_8c.html#a4ffa0949bfda52d9c7b37fcb148cbb53',1,'spi_mcu.c']]],
   ['pin_5fnum_5fmosi_15',['PIN_NUM_MOSI',['../spi__mcu_8c.html#a060569807a8819489e6a7b4ee17ad67b',1,'spi_mcu.c']]],
   ['pin_5fnumber_16',['pin_number',['../ws2812b_8c.html#a8bafab9eba59f18ef73103a6ec526585',1,'ws2812b.c']]],
-  ['pixel_5fformat_5fset_17',['pixel_format_set',['../ili9341_8c.html#a100d66d7e8beee36f57806d288f8af96',1,'ili9341.c']]],
-  ['pixel_5fformat_5fset_18',['PIXEL_FORMAT_SET',['../ili9341_8c.html#a47ba113dfe8e8118575b3dcbedd9b3ec',1,'ili9341.c']]],
+  ['pixel_5fformat_5fset_17',['PIXEL_FORMAT_SET',['../ili9341_8c.html#a47ba113dfe8e8118575b3dcbedd9b3ec',1,'ili9341.c']]],
+  ['pixel_5fformat_5fset_18',['pixel_format_set',['../ili9341_8c.html#a100d66d7e8beee36f57806d288f8af96',1,'ili9341.c']]],
   ['platform_5fid_19',['PLATFORM_ID',['../_regosky-1_c-2024_2firmware_2projects_2_examen_2build_2_c_make_files_23_824_80_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID:&#160;CMakeCCompilerId.c'],['../_regosky-1_c-2024_2firmware_2projects_2_examen_2build_2_c_make_files_23_824_80_2_compiler_id_c_xad06060f0c0b2203d91217a398da6892.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID:&#160;CMakeCXXCompilerId.cpp'],['../_e_programable___f_i_u_n_e_r_2firmware_2drivers_2build_2_c_make_files_23_824_80_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID:&#160;CMakeCCompilerId.c'],['../_e_programable___f_i_u_n_e_r_2firmware_2drivers_2build_2_c_make_files_23_824_80_2_compiler_id_c_5e64d2214b462bb331d524cc0f0e7279.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID:&#160;CMakeCXXCompilerId.cpp']]],
   ['port_20',['port',['../structserial__config__t.html#a27067c816e8c5402c7be0da9780678b0',1,'serial_config_t']]],
   ['pos_5fgamma_21',['POS_GAMMA',['../ili9341_8c.html#a964889b3527f09608fde445c20847b87',1,'ili9341.c']]],
@@ -30,8 +30,8 @@ var searchData=
   ['psa_5fcrypto_5fhash_2ec_2eobj_2ed_27',['psa_crypto_hash.c.obj.d',['../psa__crypto__hash_8c_8obj_8d.html',1,'']]],
   ['pull_28',['pull',['../structdigital__io__t.html#aacb6eba5525d04b3d9be202365c49c75',1,'digital_io_t']]],
   ['pulsew_5fms_29',['PULSEW_MS',['../servo__sg90_8c.html#ac5cace30d280065bab0b3ca1c0188e8f',1,'servo_sg90.c']]],
-  ['pump_5fratio_5fctrl_30',['pump_ratio_ctrl',['../ili9341_8c.html#a57cfbbe62f146bb9f1bf6493191053dd',1,'ili9341.c']]],
-  ['pump_5fratio_5fctrl_31',['PUMP_RATIO_CTRL',['../ili9341_8c.html#adc200d26bdb86547d00275ba038936bf',1,'ili9341.c']]],
+  ['pump_5fratio_5fctrl_30',['PUMP_RATIO_CTRL',['../ili9341_8c.html#adc200d26bdb86547d00275ba038936bf',1,'ili9341.c']]],
+  ['pump_5fratio_5fctrl_31',['pump_ratio_ctrl',['../ili9341_8c.html#a57cfbbe62f146bb9f1bf6493191053dd',1,'ili9341.c']]],
   ['pwm_32',['PWM',['../group___p_w_m.html',1,'']]],
   ['pwm_5f0_33',['PWM_0',['../group___p_w_m.html#gga5800a2bada92ba802e1cbdb0307f0c7ba857e21e20c27df92dec4574fcddfd740',1,'pwm_mcu.h']]],
   ['pwm_5f1_34',['PWM_1',['../group___p_w_m.html#gga5800a2bada92ba802e1cbdb0307f0c7baea3b5b1dcb8647c430bc9391799f4703',1,'pwm_mcu.h']]],
@@ -55,6 +55,6 @@ var searchData=
   ['pwr_5fctrl_5fa_52',['pwr_ctrl_a',['../ili9341_8c.html#a416313b8ca5aecccc037d6e3458677db',1,'ili9341.c']]],
   ['pwr_5fctrl_5fb_53',['pwr_ctrl_b',['../ili9341_8c.html#a438c9eddc4798e47d7c55f6301e1c6cc',1,'ili9341.c']]],
   ['pwr_5fctrl_5fb_54',['PWR_CTRL_B',['../ili9341_8c.html#a4c878fb5f2335f89220d476a5214325a',1,'ili9341.c']]],
-  ['pwr_5fon_5fctrl_55',['PWR_ON_CTRL',['../ili9341_8c.html#a37fc0ccd6096f0b3961023d6689b84f2',1,'ili9341.c']]],
-  ['pwr_5fon_5fctrl_56',['pwr_on_ctrl',['../ili9341_8c.html#a50c4cc503302476f9c68c328d19f5e30',1,'ili9341.c']]]
+  ['pwr_5fon_5fctrl_55',['pwr_on_ctrl',['../ili9341_8c.html#a50c4cc503302476f9c68c328d19f5e30',1,'ili9341.c']]],
+  ['pwr_5fon_5fctrl_56',['PWR_ON_CTRL',['../ili9341_8c.html#a37fc0ccd6096f0b3961023d6689b84f2',1,'ili9341.c']]]
 ];

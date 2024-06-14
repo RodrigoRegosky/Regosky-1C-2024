@@ -1,27 +1,20 @@
-/*! @mainpage Template
+/*! @mainpage Proyecto 2 - Actividad 1
  *
- * @section genDesc General Description
+ * \section genDesc General Description
  *
- * This section describes how the program works.
+ * El programa enciende determinados leds segun la distancia que mide el sensor de ultrasonido HC-SR04  y muestra el valor po una pantalla LCD
  *
- * <a href="https://drive.google.com/...">Operation Example</a>
- *
- * @section hardConn Hardware Connection
- *
- * |    Peripheral  |   ESP32   	|
- * |:--------------:|:--------------|
- * | 	PIN_X	 	| 	GPIO_X		|
- *
- *
+ * 
  * @section changelog Changelog
  *
  * |   Date	    | Description                                    |
  * |:----------:|:-----------------------------------------------|
- * | 12/09/2023 | Document creation		                         |
+ * | 14/06/2024 | Document creation		                         |
  *
- * @author Albano Peñalva (albano.penalva@uner.edu.ar)
+ * @author Rodrigo Ivan Regosky 
  *
  */
+
 
 /*==================[inclusions]=============================================*/
 #include <stdio.h>
@@ -44,12 +37,22 @@
 TaskHandle_t led1_task_handle = NULL;
 TaskHandle_t led2_task_handle = NULL;
 TaskHandle_t led3_task_handle = NULL;
-bool medir;
-bool hold;
+
+
+bool medir; /**< variable que guarda si se esta midiendo o no */
+bool hold; /**< variable que guarda si se mantiene el valor del display o se cambia */
 
 /*==================[internal functions declaration]=========================*/
 
-static void ShowDistanceTask(void *pvParameter)
+/*!
+ *
+ * @fn static void ShowDistanceTask(void *pvParameter)
+ * @brief La funcion mide la distancia y enciende determinado numero de leds segun corresponda. Ademas saca or el display el valor de la distancia
+ * @return
+ */
+
+//static void
+ void ShowDistanceTask(void *pvParameter) /**< La funcion mide la distancia y enciende determinado numero de leds segun corresponda. Ademas saca or el display el valor de la distancia */
 {
 	uint16_t distancia;
 
@@ -97,7 +100,13 @@ static void ShowDistanceTask(void *pvParameter)
 	}
 }
 
-static void TECTask(void *pvParameter)
+/*!
+ *
+ * @fn static void TECTask(void *pvParameter)
+ * @brief la funcion lee e intepreta la lectura de las teclas para meidr o dejar de medir, y para mantener o no el valor del display
+ * @return
+ */
+void TECTask(void *pvParameter) /**< la funcion lee e intepreta la lectura de las teclas para medir o dejar de medir, y para mantener o no el valor del display*/
 {
 	while (true)
 	{

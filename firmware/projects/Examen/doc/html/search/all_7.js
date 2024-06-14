@@ -1,8 +1,8 @@
 var searchData=
 [
   ['gain_0',['GAIN',['../hx711_8c.html#a97ebc8630db48de37f04b63467584ff0',1,'hx711.c']]],
-  ['gamma_5fset_1',['GAMMA_SET',['../ili9341_8c.html#a7f0a97455f8ede6150b6b2c078a90f10',1,'ili9341.c']]],
-  ['gamma_5fset_2',['gamma_set',['../ili9341_8c.html#a56f6a4cad6b1411383f78e0777d5a077',1,'ili9341.c']]],
+  ['gamma_5fset_1',['gamma_set',['../ili9341_8c.html#a56f6a4cad6b1411383f78e0777d5a077',1,'ili9341.c']]],
+  ['gamma_5fset_2',['GAMMA_SET',['../ili9341_8c.html#a7f0a97455f8ede6150b6b2c078a90f10',1,'ili9341.c']]],
   ['general_3',['general',['../_regosky-1_c-2024_2firmware_2projects_2_examen_2build_2_c_make_cache_8txt.html#ad797829e3284fd15f2780269ce9bb6dc',1,'CMakeCache.txt']]],
   ['general_20description_4',['General Description',['../index.html#genDesc',1,'']]],
   ['giop_5ffast_5',['GIOP_FAST',['../group___g_i_o_p___f_a_s_t.html',1,'']]],

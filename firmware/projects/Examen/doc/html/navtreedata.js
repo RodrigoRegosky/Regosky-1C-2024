@@ -24,9 +24,8 @@
 */
 var NAVTREE =
 [
-  [ "Examen", "index.html", [
-    [ "General Description", "index.html#genDesc", null ],
-    [ "Changelog", "index.html#changelog", null ],
+  [ "Proyecto 2 - Ejercicio 1", "index.html", [
+    [ "Examen", "index.html", "index" ],
     [ "Template", "md__c_1_2_repositorios_2_regosky-1_c-2024_2firmware_2projects_2_examen_2_r_e_a_d_m_e.html", null ],
     [ "Topics", "topics.html", "topics" ],
     [ "Estructuras de datos", "annotated.html", [
@@ -55,15 +54,15 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_e_programable___f_i_u_n_e_r_2firmware_2drivers_2build_2_c_make_files_23_824_80_2_compiler_id_c_2_c_make_c_compiler_id_8c.html",
-"gpio__mcu_8c.html#a4d21f8c265de2d2ab63e83038729448a",
-"group___m_p_u6050.html#ga1cd87f24d77ef2f077ca7a04422ff8b3",
-"group___m_p_u6050.html#ga88f99638599b4102ee4e3e34db7b7392",
-"group___neo_pixel___stripe.html#ga2da18f05db61923aa6173713a8cda595",
-"neopixel__stripe_8c.html#aea3275e63db7d1cb3df830ba4d27a838",
-"sdkconfig_8h.html#a436b77f4f1ed87d021f219035293472a",
-"sdkconfig_8h.html#a8d593fc4c5344a5d370bce6b52be6740",
-"sdkconfig_8h.html#ad2c11e29a079fdd5caa828a422090bb5",
-"timer__mcu_8c.html"
+"gpio__mcu_8c.html#a43abdef6af11fe32ed8edc921176c568",
+"group___m_p_u6050.html#ga1c9edfc09303193559373d5768d301e1",
+"group___m_p_u6050.html#ga882c558185e98f27274b54be3a03e87c",
+"group___neo_pixel___stripe.html#ga23ae424d3a323c2e315b3f89ba857a84",
+"neopixel__stripe_8c.html#ab821869451c5b9d4dcaec88d8cb00b41",
+"sdkconfig_8h.html#a43476dc8e98db617a3344df5b45c4ab5",
+"sdkconfig_8h.html#a8cb7c9017b6dfe9b7c4092580cb3c527",
+"sdkconfig_8h.html#ad23f20ebcd8a6335654d214ffc679403",
+"switch_8h.html"
 ];
 
 var SYNCONMSG = 'pulsar para deshabilitar sincronización';

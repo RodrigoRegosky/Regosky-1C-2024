@@ -16,5 +16,6 @@ var searchData=
   ['transfer_5fmode_13',['transfer_mode',['../structspi__mcu__config__t.html#a84b3bf61c72f30449d7e3e1a389b9ea2',1,'spi_mcu_config_t']]],
   ['transfer_5fmode_5f1_14',['transfer_mode_1',['../spi__mcu_8c.html#a7fb397c433c08910058254af2f985ef3',1,'spi_mcu.c']]],
   ['transfer_5fmode_5f2_15',['transfer_mode_2',['../spi__mcu_8c.html#a35ee3b7edb1f4729718629aefd3aecf4',1,'spi_mcu.c']]],
-  ['transfer_5fmode_5f3_16',['transfer_mode_3',['../spi__mcu_8c.html#a1009dbf10491aa42036acc69d855e829',1,'spi_mcu.c']]]
+  ['transfer_5fmode_5f3_16',['transfer_mode_3',['../spi__mcu_8c.html#a1009dbf10491aa42036acc69d855e829',1,'spi_mcu.c']]],
+  ['transmisor_17',['Transmisor',['../_teoria_8txt.html#a309588294320e0046f155b0336b3be52',1,'Teoria.txt']]]
 ];
