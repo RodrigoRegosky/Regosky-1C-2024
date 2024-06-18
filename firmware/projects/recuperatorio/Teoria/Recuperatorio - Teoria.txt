@@ -1,0 +1,28 @@
+Pregunta 1
+	Mientras que los temporizadores de uso general se usan para temporización y generacion de eventos regulares, 
+los watchdog timers están diseñados para supervisar y asegurar la operacion continua del sistema. 
+Los timers de propósito general pueden generar interrupciones periodicas para tareas regulares, mientras que los watchdog timers 
+generalmente reinician el sistema en caso de fallo.
+
+Usos y aplicaciones:
+	De proposito general
+		Implementación de temporización para protocolos de comunicación.
+		Medición de tiempos de ejecución de funciones.
+		Control del tiempo de tareas repetitivas.
+	Watchdog
+		Supervisión de aplicaciones críticas donde es necesario asegurar que el sistema esté funcionando continuamente.
+		Prevención de bloqueos de software al reiniciar el sistema automáticamente si se detecta un fallo.
+		Asegurar la recuperación automática en sistemas embebidos remotos o difíciles de acceder.
+
+Pregunta 2
+	Tiempo de adquisicion: intervalo de tiempo necesario para que la salida (el circuito RC) alcance el valor de la 
+entrada (señal a muestrear) con un error especificado. Es un limitante importante de sistemas microcontrolados y de adquisicion
+	Periodo de muestreo: Es el tiempo que transcurre entre la adquisición de una muestra y la siguiente. Nos permite definir la
+frecuencia de muestreo, la cual debe ser el doble de la frecuencia maxima de la señal segun el teorema de muestreo.
+
+Pregunta 3
+	Si el tiempo de adquisicion resulta mayor al periodo de muestreo se tienen diferentes problemas en conversion analogica/digital
+Uno de ellos es el Aliasing en el que las frecuencias altas pueden no ser capturadas correctamente si la señal no se 
+estabiliza adecuadamente durante el tiempo de adquisición.
+	Las consecuencias que se tienen son: captura incompleta de señales, pérdida de datos, aparicion de ruidos y distorsiones, etc
+
