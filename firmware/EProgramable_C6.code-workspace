@@ -69,6 +69,12 @@
         },
         {
             "path": "projects/recuperatorio"
+        },
+        {
+            "path": "projects/ej_bluetooth_filter"
+        },
+        {
+            "path": "projects/ej_bluetooth_fft"
         }
     ],
     "settings": {
@@ -124,7 +130,8 @@
             "soc_caps.h": "c",
             "mpu6050.h": "c",
             "i2c_mcu.h": "c",
-            "ratio": "c"
+            "ratio": "c",
+            "ble_mcu.h": "c"
         },
     },
     "tasks": {

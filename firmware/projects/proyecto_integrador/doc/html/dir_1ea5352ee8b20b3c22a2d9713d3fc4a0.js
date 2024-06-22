@@ -1,0 +1,4 @@
+var dir_1ea5352ee8b20b3c22a2d9713d3fc4a0 =
+[
+    [ "CMakeCCompilerId.c", "_regosky-1_c-2024_2firmware_2projects_2proyecto__integrador_2build_2bootloader_2_c_make_files_23320e571407e7bc43f8de776fc342cbf4.html", "_regosky-1_c-2024_2firmware_2projects_2proyecto__integrador_2build_2bootloader_2_c_make_files_23320e571407e7bc43f8de776fc342cbf4" ]
+];
